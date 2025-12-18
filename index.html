@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Glory:ital,wght@0,100..800;1,100..800&family=Space+Grotesk:wght@300..700&display=swap"
+        rel="stylesheet">
+    <!-- Remix Icon for lightweight outline logos (GitHub, LinkedIn) -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- 🔝 Header -->
+    <header class="header">
+        <nav>
+            <a href="#accueil">Accueil</a>
+            <a href="#propos">À propos</a>
+            <a href="#projet">Projets</a>
+            <a href="#competences">Compétences</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- 🏠 Accueil -->
+        <section id="accueil" class="accueil">
+            <img src="image/moi.jpg" alt="Photo de profil de Claire Fiol" class="profile-photo">
+            <h1>Front-End Développeur en devenir • Étudiant passionné</h1>
+
+            <a href="#projet">Voir mes projets</a>
+            <div class="reseau">
+                <a class="icon" href="https://github.com/allaxan" target="_blank" rel="noopener" aria-label="GitHub">
+                    <i class="ri-github-line" aria-hidden="true"></i>
+                    <span class="sr-only">GitHub</span>
+                </a>
+                <a class="icon" href="https://www.linkedin.com/in/claire-fiol-4176a8330/" target="_blank" rel="noopener" aria-label="LinkedIn">
+                    <i class="ri-linkedin-line" aria-hidden="true"></i>
+                    <span class="sr-only">LinkedIn</span>
+                </a>
+            </div>
+            <a href="#propos" class="scroll-down" aria-label="Descendre vers la section À propos">
+                <span class="chevron"></span>
+            </a>
+        </section>
+
+        <!-- 👤 À propos -->
+        <section id="propos" class="about">
+            <h2>À propos de moi</h2>
+            <p>Je suis un étudiant en développement web, passionné par le développement web.
+            </p>
+            <p>
+                Mon objectif est de devenir un développeur front-end compétent et de contribuer à des
+                projets innovants tout au long de ma future carrière.</p>
+            <div class="card-grid">
+                <article class="card" aria-labelledby="musique-title">
+                    <figure class="card-media">
+                        <img src="image/chaseatlantic.png" alt="Concert du groupe Chase Atlantic à Paris">
+                    </figure>
+                    <div class="card-body">
+                        <h3 class="card-title" id="musique-title">La musique</h3>
+                        <p class="card-text">La musique est une passion qui m'anime au quotidien, je ne quitte jamais mes écouteurs. J'aime découvrir de nouveaux genres musicaux et assister à des concerts pour vivre des expériences uniques.</p>
+                    </div>
+                </article>
+
+                <article class="card" aria-labelledby="football-title">
+                    <figure class="card-media">
+                        <img src="image/ollyonnes.jpg" alt="Match de l'équipe de football OL Lyonnes">
+                    </figure>
+                    <div class="card-body">
+                        <h3 class="card-title" id="football-title">Le football féminin</h3>
+                        <p class="card-text">Passioné de football féminin depuis ma plus tendre enfance, je ne rate quasiment aucun match de mes équipes favorites, que ce soit l'équipe de France ou les lyonnaises de l'OL Lyonnes.</p>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- 💼 Projets -->
+        <section id="projet" class="projects">
+            <h2>Mes projets</h2>
+
+            <!-- Liste des projets -->
+            <div class="projects-list" role="list">
+                <article class="project-card" role="listitem">
+                    <a class="project-link" href="projet1.html">Dans mon monde musical</a>
+                </article>
+                <article class="project-card" role="listitem">
+                    <!-- autre projet ou contenu -->
+                </article>
+            </div>
+
+        </section>
+
+        <!-- 🧩 Compétences -->
+        <section id="competences" class="competences">
+            <h2>Compétences</h2>
+            <div class="competences-list">
+                <!-- ton contenu reste ici -->
+            </div>
+        </section>
+
+        <!-- 📞 Contact -->
+        <section id="contact" class="contact">
+            <h2>Contactez-moi</h2>
+            <p>Vous pouvez me contacter via les réseaux sociaux ou par email.</p>
+            <div class="social-media">
+                <!-- ton contenu reste ici -->
+            </div>
+        </section>
+
+    </main>
+
+    <!-- 🔚 Footer -->
+    <footer class="site-footer">
+        <p>&copy; 2025 — Mon Portfolio</p>
+    </footer>
+
+</body>
+
+</html>
