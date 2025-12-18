@@ -58,11 +58,29 @@ nav a:hover {
     align-items: center;
     
 }
+.accueil a {
+    font-size: 1.2rem;
+    margin: 16px 0;
+    font-weight: 400;
+    color: #d9d9e3;
+    max-width: 600px;
+}
+
+.accueil-link  {
+    color: #cfd9ff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    padding: 8px 16px;
+    
+}
+.accueil-link:hover {
+    text-decoration: underline;
+}
 
 /* 👤 Profile photo above heading */
 .profile-photo {
-    width: 140px;
-    height: 140px;
+    width: 160px;
+    height: 160px;
     border-radius: 50%;
     object-fit: cover;
     display: block;
