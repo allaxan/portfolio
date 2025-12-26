@@ -322,6 +322,51 @@ nav a:focus-visible {
 }
 
 /* ============================= */
+/* 🎓 PARCOURS */
+/* ============================= */
+
+.parcours {
+    padding: 40px;
+    scroll-margin-top: var(--header-height);
+}
+
+.timeline {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0 0 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.timeline-item {
+    background: linear-gradient(180deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.04) 100%);
+    border-radius: 16px;
+    box-shadow: 0 8px 28px rgba(0,0,0,0.25);
+    padding: 16px 20px;
+}
+
+.timeline-item time {
+    display: inline-block;
+    color: #cfd9ff;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.timeline-item h3 {
+    margin: 0 0 6px 0;
+    font-size: 1.2rem;
+    text-align: left;
+}
+
+.timeline-text {
+    margin: 0;
+    color: #d9d9e3;
+    line-height: 1.6;
+    text-align: left;
+}
+
+/* ============================= */
 /* 📞 CONTACT */
 /* ============================= */
 
