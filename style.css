@@ -2,18 +2,24 @@
 /* 🌐 GLOBAL */
 /* ============================= */
 
+/* Better box sizing */
+*, *::before, *::after { box-sizing: border-box; }
+
 body {
     font-family: 'Glory', 'Space Grotesk', sans-serif;
     margin: 0;
     padding: 0;
     min-height: 100vh;
+    line-height: 1.5;
     color: #fff;
     background: linear-gradient(135deg, #050006 0%, #1a0720 5%, #3b1150 55%, #6b1bb0 100%);
     background-attachment: fixed;
     background-size: cover;
 }
-:root { --header-height: 25px; }
-html { scroll-behavior: smooth; }
+:root { --header-height: 72px; }
+html { scroll-behavior: smooth; scroll-padding-top: var(--header-height); }
+
+img, svg, video { max-width: 100%; height: auto; display: block; }
 
 h1, h2, h3 {
     font-family: 'Space Grotesk', sans-serif;
@@ -46,6 +52,13 @@ nav a:hover {
     text-decoration: underline;
 }
 
+/* Keyboard focus visibility */
+nav a:focus-visible {
+    outline: 3px solid #cfd9ff;
+    outline-offset: 2px;
+    border-radius: 4px;
+}
+
 /* ============================= */
 /* 🏠 ACCUEIL */
 /* ============================= */
@@ -53,13 +66,12 @@ nav a:hover {
 .accueil {
     padding: 40px;
     text-align: center ;
-    height: 100vh;
-    box-sizing: border-box;
+    /* Avoid 100vh bugs on mobile; support small viewports */
+    min-height: 100svh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
 }
 .accueil a {
     font-size: 1.2rem;
@@ -72,12 +84,25 @@ nav a:hover {
 .accueil-link  {
     color: #cfd9ff;
     text-decoration: none;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     padding: 8px 16px;
+    
+    background-color: #6b1bb0;
+    border-radius: 8px;
+    transition: background-color .2s ease, color .2s ease;
+
     
 }
 .accueil-link:hover {
     text-decoration: underline;
+    background-color: #cfd9ff;
+    color: #1a0720;
+
+}
+
+.accueil-link:focus-visible {
+    outline: 3px solid #cfd9ff;
+    outline-offset: 3px;
 }
 
 /* 👤 Profile photo above heading */
@@ -121,6 +146,10 @@ nav a:hover {
 
 .reseau .icon:hover { color: #ffffff; transform: translateY(-1px); }
 .reseau .icon:active { transform: translateY(0); }
+.reseau .icon:focus-visible {
+    outline: 3px solid #cfd9ff;
+    outline-offset: 2px;
+}
 
 /* Screen-reader only text for a11y */
 .sr-only {
@@ -142,6 +171,8 @@ nav a:hover {
     margin: 16px auto 0;
     text-decoration: none;
     opacity: 0.9;
+    /* Animate the whole container vertically for true up/down motion */
+    animation: arrow-bounce 1.5s infinite cubic-bezier(.4,.0,.2,1);
 }
 
 .scroll-down .chevron {
@@ -151,15 +182,22 @@ nav a:hover {
     display: block;
     border-right: 3px solid #cfd9ff;
     border-bottom: 3px solid #cfd9ff;
+    /* Keep the chevron angled, but do not animate here */
     transform: rotate(45deg);
-    animation: arrow-bounce 1.5s infinite cubic-bezier(.4,.0,.2,1);
 }
 
 .scroll-down:hover .chevron { border-color: #ffffff; }
 
 @keyframes arrow-bounce {
-    0%, 100% { transform: rotate(45deg) translateY(0); opacity: .9; }
-    50% { transform: rotate(45deg) translateY(6px); opacity: 1; }
+    0%, 100% { transform: translateY(0); opacity: .9; }
+    50% { transform: translateY(6px); opacity: 1; }
+}
+
+/* Respect user motion preferences */
+@media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .scroll-down { animation: none !important; }
+    * { transition: none !important; }
 }
 
 /* ============================= */
@@ -172,7 +210,7 @@ nav a:hover {
     flex-direction: column; 
     align-items: center;
     justify-content: flex-start; /* content starts near top */
-    scroll-margin-top: 16px; /* slightly earlier stop when anchored */
+    scroll-margin-top: var(--header-height); /* stop cleanly below sticky header */
 }
 .about h2 {
     margin-bottom: 20px;
@@ -185,12 +223,13 @@ nav a:hover {
 
 /* Card grid for À propos */
 .card-grid {
-    width: 80%;
+    width: min(1100px, 100%);
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 28px;
     padding: 0 20px 20px 20px;
     box-sizing: border-box;
+    margin-inline: auto;
 }
 
 .card {
@@ -231,16 +270,21 @@ nav a:hover {
 }
 
 .card-text {
-    margin: 0;
     color: #d9d9e3;
-    line-height: 1.6;
+    line-height: 1.4;
+    text-align: left;
+    
 }
 
 /* ============================= */
 /* 💼 PROJETS */
+.about .card-title,
+.about .card-text {
+     text-align: left;
+}
 /* ============================= */
 
-.projects { padding: 40px; }
+.projects { padding: 40px; scroll-margin-top: var(--header-height); }
 
 /* New clear structure for projects list and cards */
 .projects-list {
@@ -274,6 +318,7 @@ nav a:hover {
 .competences {
     padding: 40px;
     text-align: right;
+    scroll-margin-top: var(--header-height);
 }
 
 /* ============================= */
@@ -283,6 +328,7 @@ nav a:hover {
 .contact {
     padding: 40px;
     text-align: right;
+    scroll-margin-top: var(--header-height);
 }
 
 /* ============================= */
@@ -299,6 +345,19 @@ nav a:hover {
 /* 📱 RESPONSIVE */
 /* ============================= */
 
+@media (max-width: 1024px) {
+    nav a { font-size: 1.1rem; margin: 0 10px; }
+}
+
 @media (max-width: 768px) {
-    /* No fixed height on images: keep ratio and avoid crop */
+    .header { text-align: center; }
+    nav a { display: inline-block; margin: 6px 10px; }
+
+    .accueil { padding: 28px; }
+    .about { padding: 20px 24px 28px; }
+    .projects { padding: 28px; }
+    .competences, .contact { padding: 28px; }
+
+    .card-grid { grid-template-columns: 1fr; gap: 20px; padding: 0 10px 20px; }
+    .card-media { aspect-ratio: 16/9; }
 }
