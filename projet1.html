@@ -5,8 +5,130 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dans mon monde musical</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Glory:ital,wght@0,100..800;1,100..800&family=Space+Grotesk:wght@300..700&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet">
 </head>
 <body>
-    
+    <header class="header">
+        <nav>
+            <a href="index.html#accueil">Accueil</a>
+            <a href="index.html#propos">À propos</a>
+            <a href="index.html#parcours">Parcours</a>
+            <a href="index.html#projet">Projets</a>
+            <a href="index.html#competences">Compétences</a>
+            <a href="index.html#contact">Contact</a>
+        </nav>
+    </header>
+
+    <main class="project-detail">
+        <section class="project-hero">
+            <div class="project-hero-text">
+                <h1>Dans mon monde musical</h1>
+                <p class="lead">Projet universitaire (Semestre 1 du BUT MMI) présentant cinq musiques que j’apprécie, avec une mise en page lisible et accessible sur mobile et desktop.</p>
+                <div class="tags">
+                    <span class="tag">HTML</span>
+                    <span class="tag">CSS</span>
+                    <span class="tag">JavaScript</span>
+                    <span class="tag">JSON</span>
+                    <span class="tag">API</span>
+                    <span class="tag">Accessibilité</span>
+                    <span class="tag">Responsive</span>
+                </div>
+                <p>
+                    <a class="accueil-link" href="index.html#projet">← Retour aux projets</a>
+                </p>
+            </div>
+            <figure class="project-cover">
+                <img src="https://placehold.co/1280x720/3b1150/ffffff?text=Dans+mon+monde+musical" alt="Aperçu du projet Dans mon monde musical">
+            </figure>
+        </section>
+
+        <section class="project-meta">
+            <div class="meta-grid">
+                <article class="meta-card">
+                    <h3>Rôle</h3>
+                    <p>Conception et intégration front-end</p>
+                </article>
+                <article class="meta-card">
+                    <h3>Période</h3>
+                    <p>2024 — Projet universitaire (Semestre 1 BUT MMI)</p>
+                </article>
+                <article class="meta-card">
+                    <h3>Technologies</h3>
+                    <div class="tags">
+                        <span class="tag">HTML5</span>
+                        <span class="tag">CSS3</span>
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">JSON</span>
+                        <span class="tag">API</span>
+                        <span class="tag">Remix Icon</span>
+                        <span class="tag">Google Fonts</span>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="project-summary">
+            <h2>Présentation du projet</h2>
+            <p>Ce projet universitaire, réalisé lors du premier semestre de mon BUT Métiers du Multimédia et de l’Internet, présente cinq musiques que j’apprécie particulièrement.</p>
+
+            <h3>Contexte</h3>
+            <p>Il s’agit de mon premier projet universitaire comportant du développement web, à réaliser individuellement. Ce sujet m’a particulièrement plu, car la musique est pour moi un véritable remède et fait partie de mon quotidien — travailler sur un thème personnel m’a donc encore plus motivé.</p>
+
+            <h3>Consignes et droits d’auteur</h3>
+            <p>Pour chaque musique ajoutée, il fallait renseigner le titre, le ou les interprètes, un avis personnel, les droits d’auteur, ainsi qu’un lien vers une ou plusieurs plateformes de streaming permettant d’écouter l’œuvre en entier. Sur le site, seule la diffusion d’un extrait de 15 secondes était autorisée pour des raisons de copyright.</p>
+
+            <h3>Données et API</h3>
+            <p>J’ai utilisé le JSON pour stocker les musiques, les avis et les liens vers les plateformes. Bien que je ne connaissais pas ce format auparavant, j’ai rapidement appris à le comprendre et à le manipuler. Une API, appelée depuis JavaScript, servait à récupérer les données envoyées via le formulaire de suggestion musicale.</p>
+
+            <h3>Fonctionnalités</h3>
+            <ul>
+                <li>Affichage de fiches pour chaque musique (titre, interprètes, avis, droits, liens de streaming).</li>
+                <li>Gestion d’un extrait audio limité à 15 secondes pour respecter le copyright.</li>
+                <li>Formulaire de suggestion musicale avec envoi vers une API.</li>
+                <li>Mise en page responsive, lisible et accessible (contrastes, focus visibles, sémantique HTML).</li>
+            </ul>
+
+            <h3>Compétences développées</h3>
+            <p>Ce projet m’a permis d’approfondir le HTML et surtout d’améliorer mes compétences en CSS, JavaScript et JSON. J’ai également appris à utiliser une API côté front pour récupérer et exploiter des données issues d’un formulaire.</p>
+
+            <h3>Date</h3>
+            <p>2024</p>
+        </section>
+
+        <section class="project-gallery">
+            <h2>Galerie</h2>
+            <div class="gallery-grid">
+                <figure>
+                    <img src="https://placehold.co/900x600/6b1bb0/ffffff?text=Accueil" alt="Capture de la page d’accueil">
+                    <figcaption>Page d’accueil avec photo et liens de réseaux.</figcaption>
+                </figure>
+                <figure>
+                    <img src="https://placehold.co/900x600/3b1150/ffffff?text=A%20propos" alt="Capture de la section À propos">
+                    <figcaption>Section À propos avec cartes illustrées.</figcaption>
+                </figure>
+                <figure>
+                    <img src="https://placehold.co/900x600/1a0720/ffffff?text=Projets" alt="Capture de la section Projets">
+                    <figcaption>Liste des projets sous forme de cartes.</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <section class="project-links">
+            <div class="links-row">
+                <a class="accueil-link" href="https://allaxan.github.io/mon-monde-musical/" target="_blank" rel="noopener" aria-label="Voir le site en ligne (nouvelle fenêtre)">Voir le site en ligne <i class="ri-external-link-line" aria-hidden="true"></i><span class="sr-only">(nouvelle fenêtre)</span></a>
+                <a class="accueil-link" href="https://github.com/allaxan/mon-monde-musical" target="_blank" rel="noopener" aria-label="Voir le code source (nouvelle fenêtre)">Code source <i class="ri-github-line" aria-hidden="true"></i><span class="sr-only">(nouvelle fenêtre)</span></a>
+                <a class="accueil-link" href="index.html#projet">← Retour aux projets</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; 2025 — Mon Portfolio</p>
+    </footer>
 </body>
 </html>

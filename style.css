@@ -406,3 +406,112 @@ nav a:focus-visible {
     .card-grid { grid-template-columns: 1fr; gap: 20px; padding: 0 10px 20px; }
     .card-media { aspect-ratio: 16/9; }
 }
+
+/* ============================= */
+/* 📄 PROJECT DETAIL LAYOUT */
+/* ============================= */
+
+.project-detail {
+    padding: 40px;
+    max-width: 1100px;
+    margin-inline: auto;
+}
+
+.project-hero {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 24px;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.project-hero .lead {
+    color: #d9d9e3;
+    margin: 8px 0 16px 0;
+}
+
+.project-cover {
+    margin: 0;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 8px 28px rgba(0,0,0,0.25);
+}
+
+.project-cover img {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    display: block;
+}
+
+.project-meta { margin-top: 8px; }
+
+.meta-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 16px;
+}
+
+.meta-card {
+    background: linear-gradient(180deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.04) 100%);
+    border-radius: 12px;
+    box-shadow: 0 8px 28px rgba(0,0,0,0.25);
+    padding: 16px;
+}
+
+.tags { display: flex; gap: 8px; flex-wrap: wrap; }
+.tag {
+    display: inline-block;
+    color: #cfd9ff;
+    background-color: rgba(255,255,255,0.12);
+    border: 1px solid rgba(255,255,255,0.18);
+    border-radius: 999px;
+    padding: 6px 10px;
+    font-size: 0.9rem;
+}
+
+.project-summary h2,
+.project-gallery h2 { margin-top: 24px; }
+
+.project-summary p { color: #d9d9e3; }
+.project-summary ul { margin: 12px 0 0 18px; }
+.project-summary li { margin-bottom: 6px; }
+
+.gallery-grid {
+    margin-top: 12px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 16px;
+}
+
+.gallery-grid figure {
+    margin: 0;
+    border-radius: 12px;
+    overflow: hidden;
+    background: linear-gradient(180deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.04) 100%);
+}
+
+.gallery-grid img {
+    width: 100%;
+    aspect-ratio: 16/10;
+    object-fit: cover;
+    display: block;
+}
+
+.gallery-grid figcaption {
+    padding: 10px 12px;
+    color: #d9d9e3;
+}
+
+.project-links { margin-top: 16px; }
+
+/* Small enhancements on home project cards */
+.project-excerpt {
+    color: #d9d9e3;
+    margin-top: 8px;
+}
+
+@media (max-width: 900px) {
+    .project-hero { grid-template-columns: 1fr; }
+}
