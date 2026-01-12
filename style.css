@@ -50,6 +50,29 @@ nav a {
 
 nav a:hover {
     text-decoration: underline;
+.accueil .intro-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  margin: 8px 0 12px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #eef0ff;
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+}
+
+.accueil .intro-badge .role {
+  color: #8fb0ff;
+  font-weight: 700;
+}
+
+.accueil .intro-badge strong {
+  color: #ffffff;
+}
 }
 
 /* Keyboard focus visibility */
