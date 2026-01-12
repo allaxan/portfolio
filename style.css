@@ -317,9 +317,87 @@ nav a:focus-visible {
 
 .competences {
     padding: 40px;
-    text-align: right;
+    text-align: center; /* center section title and subtitle */
     scroll-margin-top: var(--header-height);
 }
+
+/* Skills subtitle */
+.skills-subtitle {
+    text-align: center;
+    color: #d9d9e3;
+    margin: 8px auto 20px;
+    max-width: 780px;
+}
+
+/* Centered container for skills grid */
+.skills-container {
+    width: min(1100px, 100%);
+    margin-inline: auto;
+    padding-inline: 16px;
+}
+
+/* Skills grid */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+    margin-top: 12px;
+}
+
+.skill-card {
+    background: linear-gradient(180deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.04) 100%);
+    border-radius: 16px;
+    box-shadow: 0 8px 28px rgba(0,0,0,0.25);
+    padding: 16px; /* more compact */
+    display: flex;
+    flex-direction: column;
+    gap: 6px; /* tighter spacing */
+    text-align: left; /* override section right align */
+    border: 1px solid rgba(255,255,255,0.08);
+    transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.skill-card:hover { transform: translateY(-2px); box-shadow: 0 14px 40px rgba(0,0,0,0.35); }
+
+.skill-icon {
+    width: 56px;
+    height: 56px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    border: 2px solid currentColor;
+    color: var(--accent, #cfd9ff);
+    background: rgba(255,255,255,0.03);
+    box-shadow: 0 0 0 2px rgba(255,255,255,0.02) inset, 0 0 10px rgba(207,217,255,0.16);
+}
+.skill-icon i { font-size: 26px; }
+
+.skill-title { margin: 4px 0 0 0; font-size: 1.05rem; }
+.skill-cat { margin: 0; color: #c9c9d5; font-size: .9rem; }
+
+.skill-dots { display: flex; gap: 6px; margin-top: 8px; }
+:root { --dot-active: linear-gradient(180deg, #e08bff 0%, #7f7cfb 100%); --dot-inactive: rgba(207,217,255,0.25); }
+.skill-dots .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--dot-inactive); }
+/* Active dots by level */
+.skill-card[data-level="1"] .dot:nth-child(-n+1),
+.skill-card[data-level="2"] .dot:nth-child(-n+2),
+.skill-card[data-level="3"] .dot:nth-child(-n+3),
+.skill-card[data-level="4"] .dot:nth-child(-n+4),
+.skill-card[data-level="5"] .dot:nth-child(-n+5) {
+    background: var(--dot-active);
+}
+
+/* Accent colors per skill */
+.skill-card.html  { --accent: #E44D26; }
+.skill-card.css   { --accent: #1572B6; }
+.skill-card.js    { --accent: #F7DF1E; color: #f0e27a; }
+.skill-card.git   { --accent: #F05032; }
+.skill-card.github{ --accent: #b5b5c8; }
+.skill-card.php   { --accent: #777BB3; }
+.skill-card.sql   { --accent: #2AA198; }
+.skill-card.figma { --accent: #F24E1E; }
+.skill-card.responsive { --accent: #00C853; }
 
 /* ============================= */
 /* 🎓 PARCOURS */
@@ -514,4 +592,12 @@ nav a:focus-visible {
 
 @media (max-width: 900px) {
     .project-hero { grid-template-columns: 1fr; }
+}
+
+/* Skills grid responsiveness */
+@media (max-width: 1024px) {
+    .skills-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 600px) {
+    .skills-grid { grid-template-columns: 1fr; }
 }
