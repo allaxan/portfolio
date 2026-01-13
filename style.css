@@ -557,6 +557,13 @@ nav a:focus-visible {
 /* 📱 RESPONSIVE */
 /* ============================= */
 
+/* ============================= */
+/* 📝 CV SECTION */
+/* ============================= */
+
+.cv { padding: 40px; text-align: center; scroll-margin-top: var(--header-height); }
+.cv .cv-actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-top: 12px; }
+
 @media (max-width: 1024px) {
     nav a { font-size: 1.1rem; margin: 0 10px; }
 }
