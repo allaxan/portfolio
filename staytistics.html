@@ -13,100 +13,174 @@
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="icon" href="image/logo_portfolio.png" type="image/png" />
 </head>
+
 <body>
-    <header class="header">
-        <a href="index.html" class="logo-home" aria-label="Retour à l'accueil">
+<header class="header">
+    <a href="index.html" class="logo-home" aria-label="Retour à l'accueil">
         <img src="image/logo_portfolio.png" alt="Logo Claire Fiol" class="logo-img" />
-      </a>
-      <nav>
+    </a>
+    <nav>
         <a href="index.html#propos">À propos</a>
         <a href="index.html#parcours">Parcours</a>
         <a href="index.html#projet">Projets</a>
         <a href="index.html#competences">Compétences</a>
         <a href="index.html#cv">CV</a>
         <a href="index.html#contact">Contact</a>
-      </nav>
-    </header>
+    </nav>
+</header>
 
-    <main class="project-detail">
-        <section class="project-hero">
-            <div class="project-hero-text">
-                <h1>Staytistics</h1>
-                <p class="lead">Projet universitaire réalisé en octobre et novembre 2025 (2e année BUT MMI), en binôme avec Jimmy. L’objectif : présenter des statistiques sur l’évolution des auditeurs des musiques du groupe K-pop Stray Kids, via des graphiques interactifs et percutants.</p>
+<main class="project-detail">
+
+    <!-- HERO -->
+    <section class="project-hero">
+        <div class="project-hero-text">
+            <h1>Staytistics</h1>
+            <p class="lead">
+                Projet universitaire réalisé en <strong>octobre et novembre 2025</strong>
+                (2ᵉ année de BUT MMI), en binôme avec Jimmy. L’objectif était de
+                <strong>visualiser l’évolution des auditeurs</strong> des musiques du groupe
+                de K-pop <strong>Stray Kids</strong> à travers des graphiques interactifs.
+            </p>
+            <div class="tags">
+                <span class="tag">HTML5</span>
+                <span class="tag">CSS3</span>
+                <span class="tag">JavaScript</span>
+                <span class="tag">JSON</span>
+                <span class="tag">API</span>
+                <span class="tag">Deezer API</span>
+                <span class="tag">Data Visualisation</span>
+                <span class="tag">Responsive</span>
+            </div>
+            <p>
+                <a class="accueil-link" href="index.html#projet">← Retour aux projets</a>
+            </p>
+        </div>
+        <figure class="project-cover">
+            <img src="image/staytistics.png" alt="Aperçu du projet Staytistics">
+        </figure>
+    </section>
+
+    <!-- DÉMARCHE -->
+    <section class="project-summary">
+        <h2>Démarche du projet</h2>
+
+        <p>
+            Ce projet s’inscrit dans le cadre d’un travail en <strong>binôme</strong> visant
+            à concevoir une interface de <strong>data visualisation</strong> à partir de
+            données réelles, tout en proposant une expérience utilisateur claire,
+            engageante et responsive.
+        </p>
+
+        <h3>Contexte et intention</h3>
+        <p>
+            L’objectif était de transformer des données chiffrées liées à la musique
+            en informations lisibles et compréhensibles. Le choix du groupe
+            <strong>Stray Kids</strong> nous a permis de travailler sur un sujet qui nous
+            motive, tout en abordant des problématiques concrètes de visualisation
+            de données.
+        </p>
+
+        <h3>Recherche et sources de données</h3>
+        <p>
+            Avant toute phase de développement, nous avons identifié et sélectionné
+            les <strong>sources de données</strong> nécessaires afin de garantir la
+            fiabilité et la cohérence des statistiques présentées. Ces données ont
+            ensuite été structurées sous forme de <strong>fichiers JSON</strong>.
+        </p>
+
+        <h3>Conception graphique et identité visuelle</h3>
+        <p>
+            Une <strong>maquette Figma</strong> a été réalisée afin de définir la structure
+            des pages et l’identité visuelle du projet. Celle-ci s’inspire de l’univers
+            du groupe Stray Kids, tout en conservant une lisibilité optimale pour la
+            consultation des graphiques.
+        </p>
+
+        <h3>Développement et visualisation des données</h3>
+        <p>
+            Le développement a été réalisé en parallèle de la conception graphique :
+            pendant qu’une personne travaillait sur la maquette, l’autre commençait
+            l’intégration HTML et CSS. Les graphiques ont ensuite été développés en
+            <strong>JavaScript</strong>, à partir des données JSON, afin de proposer des
+            visualisations dynamiques et interactives.
+        </p>
+
+        <h3>Intégration de l’API Deezer</h3>
+        <p>
+            L’<strong>API Deezer</strong> a été intégrée afin d’enrichir l’interface avec
+            des informations dynamiques, comme les pochettes d’albums et d’EP,
+            apportant un contexte visuel complémentaire aux statistiques affichées.
+        </p>
+    </section>
+
+    <!-- META -->
+    <section class="project-meta">
+        <div class="meta-grid">
+            <article class="meta-card">
+                <h3>Rôle</h3>
+                <p>Conception, intégration front-end et data visualisation</p>
+            </article>
+            <article class="meta-card">
+                <h3>Période</h3>
+                <p>Octobre — Novembre 2025</p>
+            </article>
+            <article class="meta-card">
+                <h3>Technologies</h3>
                 <div class="tags">
-                    <span class="tag">HTML</span>
-                    <span class="tag">CSS</span>
+                    <span class="tag">HTML5</span>
+                    <span class="tag">CSS3</span>
                     <span class="tag">JavaScript</span>
                     <span class="tag">JSON</span>
-                    <span class="tag">API</span>
                     <span class="tag">Deezer API</span>
-                    <span class="tag">Data Viz</span>
-                    <span class="tag">Responsive</span>
                 </div>
-                <p>
-                    <a class="accueil-link" href="index.html#projet">← Retour aux projets</a>
-                </p>
-            </div>
-            <figure class="project-cover">
-                <img src="image/staytistics.png" alt="Aperçu du projet Staytistics">
-            </figure>
-        </section>
+            </article>
+        </div>
+    </section>
 
-        <section class="project-meta">
-            <div class="meta-grid">
-                <article class="meta-card">
-                    <h3>Rôle</h3>
-                    <p>Conception, intégration et data visualisation front-end</p>
-                </article>
-                <article class="meta-card">
-                    <h3>Période</h3>
-                    <p>Octobre — Novembre 2025</p>
-                </article>
-                <article class="meta-card">
-                    <h3>Technologies utilisées</h3>
-                    <div class="tags">
-                        <span class="tag">HTML5</span>
-                        <span class="tag">CSS3</span>
-                        <span class="tag">JavaScript</span>
-                        <span class="tag">JSON</span>
-                        <span class="tag">Deezer API</span>
-                        <span class="tag">Google Fonts</span>
-                        <span class="tag">Remix Icon</span>
-                    </div>
-                </article>
-            </div>
-        </section>
+    <!-- CONTENU -->
+    <section class="project-summary">
+        <h2>Fonctionnalités principales</h2>
+        <ul>
+            <li>Visualisation de statistiques d’audience sous forme de graphiques interactifs.</li>
+            <li>Chargement dynamique des données depuis des fichiers JSON.</li>
+            <li>Enrichissement visuel via l’API Deezer (albums, EP).</li>
+            <li>Interface responsive adaptée aux différents supports.</li>
+        </ul>
 
-        <section class="project-summary">
-            <h2>Présentation du projet</h2>
-            <p>Ce projet universitaire, réalisé durant ma deuxième année de BUT Métiers du Multimédia et de l’Internet avec mon camarade Jimmy, a pour objectif de présenter des statistiques sur l’évolution des auditeurs des musiques du groupe de K‑pop Stray Kids, sous forme de graphiques interactifs et percutants.</p>
+        <h3>Compétences développées</h3>
+        <p>
+            Ce projet m’a permis de renforcer mes compétences en
+            <strong>JavaScript</strong>, en manipulation de données,
+            en <strong>data visualisation</strong> et en intégration d’API,
+            tout en travaillant la collaboration et l’organisation en binôme.
+        </p>
 
-            <h3>Sources de données</h3>
-            <p>Avant de commencer le développement, nous avons d’abord recherché et sélectionné les sources à partir desquelles nous allions récupérer les statistiques afin d’assurer la fiabilité des informations.</p>
+        <h3>Résultat</h3>
+        <p>
+            Le résultat est une plateforme claire et interactive, permettant de
+            comprendre l’évolution des auditeurs de Stray Kids à travers des
+            visualisations de données pertinentes. Ce projet illustre ma capacité
+            à transformer des données brutes en informations exploitables.
+        </p>
+    </section>
 
-            <h3>Maquette Figma & identité visuelle</h3>
-            <p>Une fois les données identifiées, nous avons conçu une maquette sur Figma. Nous y avons intégré une identité visuelle qui nous représente en tant qu’auditeurs de Stray Kids, tout en restant fidèle à l’univers du groupe.</p>
+    <!-- LIENS -->
+    <section class="project-links">
+        <div class="links-row">
+            <a class="accueil-link" href="https://mmi-projets.github.io/Staytistics/" target="_blank" rel="noopener">
+                Voir le site <i class="ri-external-link-line"></i>
+            </a>
+            <a class="accueil-link" href="https://github.com/MMI-projets/Staytistics" target="_blank" rel="noopener">
+                Code source <i class="ri-github-line"></i>
+            </a>
+            <a class="accueil-link" href="index.html#projet">← Retour aux projets</a>
+        </div>
+    </section>
 
-            <h3>Développement & intégration des graphiques</h3>
-            <p>Pour optimiser notre temps, pendant qu’une personne travaillait sur la maquette, l’autre commençait le développement en HTML et CSS. Nous avons ensuite consacré davantage de temps à l’intégration des statistiques sous forme de graphiques en JavaScript, à partir de fichiers JSON.</p>
+</main>
 
-            <h3>API Deezer</h3>
-            <p>En complément des données JSON, nous avons intégré l’API Deezer. Elle permet de récupérer automatiquement certaines informations, comme les images des albums/EP présents dans les albums, afin d’enrichir l’expérience utilisateur à côté des statistiques.</p>
-        </section>
-
-    
-
-        <section class="project-links">
-            <div class="links-row">
-                <a class="accueil-link" href="https://mmi-projets.github.io/Staytistics/" target="_blank" rel="noopener" aria-label="Voir le site en ligne (nouvelle fenêtre)">Voir le site en ligne <i class="ri-external-link-line" aria-hidden="true"></i><span class="sr-only">(nouvelle fenêtre)</span></a>
-                <a class="accueil-link" href="https://github.com/MMI-projets/Staytistics" target="_blank" rel="noopener" aria-label="Voir le code source (nouvelle fenêtre)">Code source <i class="ri-github-line" aria-hidden="true"></i><span class="sr-only">(nouvelle fenêtre)</span></a>
-                <a class="accueil-link" href="index.html#projet">← Retour aux projets</a>
-            </div>
-        </section>
-    </main>
-
-    <footer class="site-footer">
-        <p>&copy; 2025 — Mon Portfolio</p>
-    </footer>
+<footer class="site-footer">
+    <p>&copy; 2025 — Mon Portfolio</p>
+</footer>
 </body>
 </html>
