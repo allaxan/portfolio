@@ -665,6 +665,12 @@ nav a:focus-visible {
   font-size: 1.6rem;
 }
 
+.skill-icon img {
+  width: 70%;
+  height: 70%;
+  object-fit: contain;
+}
+
 .skill-title {
   margin: 4px 0 0 0;
   font-size: 1.05rem;

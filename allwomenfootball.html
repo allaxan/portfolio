@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AllWomenFootball — Projet</title>
+    <title>AllWomenFootball — Projet universitaire</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,117 +13,151 @@
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="icon" href="image/logo_portfolio.png" type="image/png" />
 </head>
+
 <body>
-    <header class="header">
-        <a href="index.html" class="logo-home" aria-label="Retour à l'accueil">
+<header class="header">
+    <a href="index.html" class="logo-home" aria-label="Retour à l'accueil">
         <img src="image/logo_portfolio.png" alt="Logo Claire Fiol" class="logo-img" />
-      </a>
-      <nav>
+    </a>
+    <nav>
         <a href="index.html#propos">À propos</a>
         <a href="index.html#parcours">Parcours</a>
         <a href="index.html#projet">Projets</a>
         <a href="index.html#competences">Compétences</a>
         <a href="index.html#cv">CV</a>
         <a href="index.html#contact">Contact</a>
-      </nav>
-    </header>
+    </nav>
+</header>
 
-    <main class="project-detail">
-        <section class="project-hero">
-            <div class="project-hero-text">
-                <h1>AllWomenFootball</h1>
-                <p class="lead">
-                    Plateforme web dédiée au football féminin, centrée sur la consultation
-                    et l’analyse des statistiques des joueuses, des clubs et des équipes nationales.
-                </p>
+<main class="project-detail">
+
+    <!-- HERO -->
+    <section class="project-hero">
+        <div class="project-hero-text">
+            <h1>AllWomenFootball</h1>
+            <p class="lead">
+                Plateforme web dédiée au <strong>football féminin</strong>, permettant la
+                consultation et l’analyse de statistiques détaillées sur les joueuses,
+                les clubs et les équipes nationales.
+            </p>
+            <div class="tags">
+                <span class="tag">HTML5</span>
+                <span class="tag">CSS3</span>
+                <span class="tag">JavaScript</span>
+                <span class="tag">PHP</span>
+                <span class="tag">SQL</span>
+            </div>
+            <p>
+                <a class="accueil-link" href="index.html#projet">← Retour aux projets</a>
+            </p>
+        </div>
+        <figure class="project-cover">
+            <img src="image/logo.png" alt="Logo du projet AllWomenFootball">
+        </figure>
+    </section>
+
+    <!-- DÉMARCHE -->
+    <section class="project-summary">
+        <h2>Démarche du projet</h2>
+
+        <p>
+            Ce projet a été réalisé <strong>individuellement</strong> dans le cadre du
+            <strong>semestre 2 du BUT Métiers du Multimédia et de l’Internet</strong>.
+            L’objectif était de concevoir une plateforme web permettant de structurer,
+            exploiter et présenter des données complexes de manière claire et accessible.
+        </p>
+
+        <h3>Contexte et intention</h3>
+        <p>
+            Le football féminin souffre encore d’un manque de visibilité et de centralisation
+            des données statistiques. Ce projet est né de la volonté de proposer un outil
+            permettant de <strong>mettre en valeur les performances des joueuses</strong>
+            et de faciliter l’analyse des statistiques pour les passionnés comme pour les curieux.
+        </p>
+
+        <h3>Conception de la structure des données</h3>
+        <p>
+            Une attention particulière a été portée à la <strong>modélisation de la base de données</strong>.
+            Celle-ci a été pensée pour gérer efficacement les relations entre les joueuses,
+            les clubs, les équipes nationales, les saisons et les matchs, afin d’assurer
+            une consultation fluide et cohérente des informations.
+        </p>
+
+        <h3>Choix techniques et logique applicative</h3>
+        <p>
+            Les données sont stockées dans une base <strong>SQL</strong> et exploitées côté
+            serveur à l’aide de <strong>PHP</strong>. Le <strong>JavaScript</strong> permet
+            d’ajouter des interactions côté client, notamment pour les fonctionnalités
+            de tri et de comparaison des statistiques.
+        </p>
+    </section>
+
+    <!-- META -->
+    <section class="project-meta">
+        <div class="meta-grid">
+            <article class="meta-card">
+                <h3>Rôle</h3>
+                <p>Conception, développement front-end et back-end, gestion de la base de données</p>
+            </article>
+            <article class="meta-card">
+                <h3>Période</h3>
+                <p>Semestre 2 — BUT Métiers du Multimédia et de l’Internet</p>
+            </article>
+            <article class="meta-card">
+                <h3>Technologies</h3>
                 <div class="tags">
-                    <span class="tag">HTML</span>
-                    <span class="tag">CSS</span>
+                    <span class="tag">HTML5</span>
+                    <span class="tag">CSS3</span>
                     <span class="tag">JavaScript</span>
                     <span class="tag">PHP</span>
                     <span class="tag">SQL</span>
                 </div>
-                <p>
-                    <a class="accueil-link" href="index.html#projet">← Retour aux projets</a>
-                </p>
-            </div>
-            <figure class="project-cover">
-                <img src="image/logo.png" alt="Logo du projet AllWomenFootball">
-            </figure>
-        </section>
+            </article>
+        </div>
+    </section>
 
-        <section class="project-meta">
-            <div class="meta-grid">
-                <article class="meta-card">
-                    <h3>Rôle</h3>
-                    <p>Conception, développement front-end et back-end, gestion de la base de données</p>
-                </article>
-                <article class="meta-card">
-                    <h3>Période</h3>
-                    <p>Semestre 2 du BUT Métiers du Multimédia et de l'Internet</p>
-                </article>
-                <article class="meta-card">
-                    <h3>Technologies utilisées</h3>
-                    <div class="tags">
-                        <span class="tag">HTML</span>
-                        <span class="tag">CSS</span>
-                        <span class="tag">JavaScript</span>
-                        <span class="tag">PHP</span>
-                        <span class="tag">SQL</span>
-                    </div>
-                </article>
-            </div>
-        </section>
+    <!-- CONTENU -->
+    <section class="project-summary">
+        <h2>Fonctionnalités principales</h2>
+        <ul>
+            <li>Consultation des profils de joueuses avec statistiques détaillées.</li>
+            <li>Accès aux statistiques des clubs par saison.</li>
+            <li>Statistiques globales pour les équipes nationales.</li>
+            <li>Affichage des résultats de matchs.</li>
+            <li>Fonctionnalités de tri pour faciliter la comparaison des données.</li>
+            <li>Interface responsive et lisible sur différents supports.</li>
+        </ul>
 
-        <section class="project-summary">
-            <h2>Présentation du projet</h2>
-            <p>
-                Ce projet, réalisé <strong>seule</strong>, a pour objectif de répertorier les
-                <strong>joueuses de football féminin</strong> ainsi que leurs
-                <strong>statistiques individuelles</strong>.
-                La plateforme propose également des statistiques concernant les
-                <strong>clubs</strong> sur leurs différentes saisons et les <strong>équipes nationales</strong>,
-                ainsi que les <strong>résultats des matchs</strong>.
-            </p>
+        <h3>Compétences développées</h3>
+        <p>
+            Ce projet m’a permis de renforcer mes compétences en
+            <strong>développement web full-stack</strong>, en structuration de bases de données
+            relationnelles et en manipulation de données dynamiques côté serveur.
+        </p>
 
-            <h3>Fonctionnalités principales</h3>
-            <ul>
-                <li>Consultation des profils de joueuses avec statistiques détaillées.</li>
-                <li>Accès à des statistiques par saisons pour les clubs et global pour les équipes nationales.</li>
-                <li>Affichage des résultats de matchs.</li>
-                <li>Fonctions de <strong>tri des statistiques</strong> pour faciliter la comparaison des données.</li>
-                <li>Interface claire et responsive, adaptée à différents supports.</li>
-            </ul>
+        <h3>Résultat</h3>
+        <p>
+            Le résultat est une plateforme fonctionnelle et évolutive, permettant
+            d’analyser efficacement des données liées au football féminin.
+            Ce projet illustre ma capacité à concevoir un système complet,
+            de la base de données jusqu’à l’interface utilisateur.
+        </p>
+    </section>
 
-            <h3>Approche technique</h3>
-            <p>
-                Le projet repose sur une base de données SQL permettant de stocker
-                les informations liées aux joueuses, équipes et matchs.
-                Les données sont exploitées côté serveur en PHP et affichées dynamiquement
-                côté web grâce au JavaScript qui permet certaines fonctionnalités, notamment pour les fonctionnalités de tri.
-            </p>
+    <!-- LIENS -->
+    <section class="project-links">
+        <div class="links-row">
+            <a class="accueil-link" href="https://fiol.projetsmmichamps.fr/webinventory/index.php" target="_blank" rel="noopener">
+                Voir le site <i class="ri-external-link-line"></i>
+            </a>
+            <a class="accueil-link" href="index.html#projet">← Retour aux projets</a>
+        </div>
+    </section>
 
-            <h3>Résultat</h3>
-            <p>
-                Le résultat est un site web fonctionnel permettant de consulter
-                et d’analyser facilement des statistiques liées au football féminin.
-                Ce projet met en avant mes compétences en développement web
-                full-stack et en structuration de données.
-            </p>
-        </section>
+</main>
 
-        <section class="project-links">
-            <div class="links-row">
-                <a class="btn btn-primary" href="https://fiol.projetsmmichamps.fr/webinventory/index.php" target="_blank" rel="noopener noreferrer">
-                    <i class="ri-external-link-line" aria-hidden="true"></i> Voir le site
-                </a>
-                <a class="accueil-link" href="index.html#projet">← Retour aux projets</a>
-            </div>
-        </section>
-    </main>
-
-    <footer class="site-footer">
-        <p>&copy; 2025 — Mon Portfolio</p>
-    </footer>
+<footer class="site-footer">
+    <p>&copy; 2025 — Mon Portfolio</p>
+</footer>
 </body>
 </html>
