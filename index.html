@@ -37,32 +37,44 @@
   <main>
     <!-- 🏠 Accueil -->
     <section id="accueil" class="accueil">
-      <img src="image/moi.png" alt="Photo de profil de Claire Fiol" class="profile-photo" />
-      <div class="intro-badge" aria-label="Hello moi c'est Claire Fiol, Développeuse Front-End en devenir">
-        <span>Hello moi c'est,</span>
-        <strong>Claire Fiol</strong>
-      </div>
-      <h1>Développeuse Front-End en devenir</h1>
-
-      <a href="#projet" class="accueil-link">Voir mes projets</a>
-      <div class="reseau">
-        <a class="icon" href="https://github.com/allaxan" target="_blank" rel="noopener" aria-label="GitHub">
-          <i class="ri-github-line" aria-hidden="true"></i>
-          <span class="sr-only">GitHub</span>
-        </a>
-        <a class="icon" href="https://www.linkedin.com/in/claire-fiol-4176a8330/" target="_blank" rel="noopener"
-          aria-label="LinkedIn">
-          <i class="ri-linkedin-line" aria-hidden="true"></i>
-          <span class="sr-only">LinkedIn</span>
-        </a>
-        <a class="icon" href="https://threejs.org/" target="_blank" rel="noopener" aria-label="Three.js">
-          <i class="ri-cube-3-line" aria-hidden="true"></i>
-          <span class="sr-only">Three.js</span>
-        </a>
-        <a class="icon" href="https://www.figma.com/" target="_blank" rel="noopener" aria-label="Figma">
-          <i class="ri-figma-line" aria-hidden="true"></i>
-          <span class="sr-only">Figma</span>
-        </a>
+      <div class="accueil-content">
+        <div class="accueil-text">
+          <div class="intro-badge" aria-label="Hello moi c'est Claire Fiol, Développeuse Front-End en devenir">
+            <span>Hello moi c'est,</span>
+            <strong>Claire Fiol</strong>
+          </div>
+          <h1>Développeuse <span class="highlight">Front-End</span> en devenir</h1>
+          <p class="accueil-description">
+            Passionnée par le développement web et la création d'expériences utilisateur innovantes. 
+            Je transforme des idées en interfaces modernes et accessibles.
+          </p>
+          <div class="accueil-actions">
+            <a href="#projet" class="accueil-link primary">
+              <i class="ri-folder-3-line"></i>
+              Voir mes projets
+            </a>
+            <a href="#contact" class="accueil-link secondary">
+              <i class="ri-mail-line"></i>
+              Me contacter
+            </a>
+          </div>
+          <div class="reseau">
+            <a class="icon" href="https://github.com/allaxan" target="_blank" rel="noopener" aria-label="GitHub">
+              <i class="ri-github-line" aria-hidden="true"></i>
+            </a>
+            <a class="icon" href="https://www.linkedin.com/in/claire-fiol-4176a8330/" target="_blank" rel="noopener" aria-label="LinkedIn">
+              <i class="ri-linkedin-line" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+        <div class="accueil-visual">
+          <div class="profile-container">
+            <img src="image/moi.png" alt="Photo de profil de Claire Fiol" class="profile-photo" />
+            <div class="profile-decoration decoration-1"></div>
+            <div class="profile-decoration decoration-2"></div>
+            <div class="profile-decoration decoration-3"></div>
+          </div>
+        </div>
       </div>
       <a href="#propos" class="scroll-down" aria-label="Descendre vers la section À propos">
         <span class="chevron"></span>
@@ -84,12 +96,12 @@
         carrière.
       </p>
       <div class="card-grid">
-        <article class="card" aria-labelledby="musique-title">
+        <article class="card">
           <figure class="card-media">
             <img src="image/chaseatlantic.png" alt="Concert du groupe Chase Atlantic à Paris" />
           </figure>
           <div class="card-body">
-            <h3 class="card-title" id="musique-title">La musique</h3>
+            <h3 class="card-title">La musique</h3>
             <p class="card-text">
               La musique est une passion qui m'anime au quotidien, je ne
               quitte jamais mes écouteurs. J'aime découvrir de nouveaux genres
@@ -99,12 +111,12 @@
           </div>
         </article>
 
-        <article class="card" aria-labelledby="football-title">
+        <article class="card">
           <figure class="card-media">
             <img src="image/equipe_de_france.jpg" alt="Image d'avant match de l'équipe de France féminine de football" />
           </figure>
           <div class="card-body">
-            <h3 class="card-title" id="football-title">
+            <h3 class="card-title">
               Le football féminin
             </h3>
             <p class="card-text">
@@ -115,12 +127,12 @@
           </div>
         </article>
 
-        <article class="card" aria-labelledby="jeux-title">
+        <article class="card">
           <figure class="card-media">
-            <img src="./image/the_last_of_us.jpg" alt="Couverture du jeu vidéo The Last of Us Part I et II" />
+            <img src="image/the_last_of_us.jpg" alt="Couverture du jeu vidéo The Last of Us Part I et II" />
           </figure>
           <div class="card-body">
-            <h3 class="card-title" id="jeux-title">Les jeux vidéo</h3>
+            <h3 class="card-title">Les jeux vidéo</h3>
             <p class="card-text">
               Les jeux vidéo qui me bercent depuis ma plus tendre enfance me
               permettent de me détendre et d’exercer ma créativité. J’aime
@@ -130,13 +142,12 @@
           </div>
         </article>
 
-        <article class="card" aria-labelledby="lecture-title">
+        <article class="card">
           <figure class="card-media">
-            <img src="https://placehold.co/1280x720/3b1150/ffffff?text=Lecture"
-              alt="Pile de livres et moment de lecture" />
+            <img src="https://placehold.co/1280x720/3b1150/ffffff?text=Lecture" alt="Pile de livres et moment de lecture" />
           </figure>
           <div class="card-body">
-            <h3 class="card-title" id="lecture-title">La lecture</h3>
+            <h3 class="card-title">La lecture</h3>
             <p class="card-text">
               Lire me permet de m’évader et d’apprendre. J’apprécie lire de
               bons romans, les policiers et les ouvrages techniques qui
@@ -167,7 +178,7 @@
             </li>
             <li>
               Travail en équipe, respect des normes d’hygiène et de sécurité
-              alimentaire.zzz
+              alimentaire.
             </li>
           </ul>
         </article>
@@ -198,7 +209,7 @@
         <li class="timeline-item" role="listitem">
           <time datetime="2022">2022 — 2024</time>
           <h3>
-            Campus de Coulommmiers - Bac STI2D option Système Informatique et
+            Campus de Coulommiers - Bac STI2D option Système Informatique et
             Numérique
           </h3>
         </li>
@@ -249,7 +260,7 @@
           <!-- Project 2 -->
           <article class="work-card" role="listitem">
             <figure class="work-media">
-              <img src="image/staytistics.png" alt="Logoz du projet Staytistics" />
+              <img src="image/staytistics.png" alt="Logo du projet Staytistics" />
             </figure>
             <div class="work-body">
               <h3 class="work-title">
@@ -414,130 +425,121 @@
 
       <div class="skills-container">
         <div class="skills-grid" role="list">
-          <article class="skill-card html" role="listitem" data-level="5" aria-label="HTML niveau 5 sur 5">
-            <div class="skill-icon">
-              <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+          <article class="skill-card html" data-level="5" aria-label="HTML niveau 5 sur 5">
+            <div class="skill-icon" aria-hidden="true">
+              <i class="ri-code-s-slash-line"></i>
             </div>
             <h3 class="skill-title">HTML</h3>
             <p class="skill-cat">Web</p>
             <div class="skill-dots" aria-hidden="true">
-              <span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span
-                class="dot"></span>
+              <span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span>
             </div>
           </article>
 
-          <article class="skill-card css" role="listitem" data-level="5" aria-label="CSS niveau 5 sur 5">
-            <div class="skill-icon">
-              <i class="ri-braces-line" aria-hidden="true"></i>
+          <article class="skill-card css" data-level="5" aria-label="CSS niveau 5 sur 5">
+            <div class="skill-icon" aria-hidden="true">
+              <i class="ri-braces-line"></i>
             </div>
             <h3 class="skill-title">CSS</h3>
             <p class="skill-cat">Web</p>
             <div class="skill-dots" aria-hidden="true">
-              <span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span
-                class="dot"></span>
+              <span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span>
             </div>
           </article>
 
-          <article class="skill-card js" role="listitem" data-level="4" aria-label="JavaScript niveau 4 sur 5">
-            <div class="skill-icon">
-              <i class="ri-cpu-line" aria-hidden="true"></i>
+          <article class="skill-card js" data-level="4" aria-label="JavaScript niveau 4 sur 5">
+            <div class="skill-icon" aria-hidden="true">
+              <i class="ri-cpu-line"></i>
             </div>
             <h3 class="skill-title">JavaScript</h3>
             <p class="skill-cat">Langage</p>
             <div class="skill-dots" aria-hidden="true">
-              <span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span
-                class="dot"></span>
+              <span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span>
             </div>
           </article>
 
-          <article class="skill-card git" role="listitem" data-level="3" aria-label="Git niveau 3 sur 5">
-            <div class="skill-icon">
-              <i class="ri-git-branch-line" aria-hidden="true"></i>
+          <article class="skill-card git" data-level="3" aria-label="Git niveau 3 sur 5">
+            <div class="skill-icon" aria-hidden="true">
+              <i class="ri-git-branch-line"></i>
             </div>
             <h3 class="skill-title">Git</h3>
             <p class="skill-cat">Version Control</p>
             <div class="skill-dots" aria-hidden="true">
-              <span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span
-                class="dot"></span>
+              <span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span>
             </div>
           </article>
 
-          <article class="skill-card github" role="listitem" data-level="5" aria-label="GitHub niveau 5 sur 5">
-            <div class="skill-icon">
-              <i class="ri-github-line" aria-hidden="true"></i>
+          <article class="skill-card github" data-level="5" aria-label="GitHub niveau 5 sur 5">
+            <div class="skill-icon" aria-hidden="true">
+              <i class="ri-github-line"></i>
             </div>
             <h3 class="skill-title">GitHub</h3>
             <p class="skill-cat">Collaboration</p>
             <div class="skill-dots" aria-hidden="true">
-              <span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span
-                class="dot"></span>
+              <span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span>
             </div>
           </article>
 
-          <article class="skill-card php" role="listitem" data-level="3" aria-label="PHP niveau 3 sur 5">
-            <div class="skill-icon">
-              <i class="ri-code-box-line" aria-hidden="true"></i>
+          <article class="skill-card php" data-level="3" aria-label="PHP niveau 3 sur 5">
+            <div class="skill-icon" aria-hidden="true">
+              <i class="ri-code-box-line"></i>
             </div>
             <h3 class="skill-title">PHP</h3>
             <p class="skill-cat">Backend</p>
             <div class="skill-dots" aria-hidden="true">
-              <span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span
-                class="dot"></span>
+              <span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span>
             </div>
           </article>
 
-          <article class="skill-card sql" role="listitem" data-level="5" aria-label="SQL niveau 3 sur 5">
-            <div class="skill-icon">
-              <i class="ri-database-2-line" aria-hidden="true"></i>
+          <article class="skill-card sql" data-level="5" aria-label="SQL niveau 5 sur 5">
+            <div class="skill-icon" aria-hidden="true">
+              <i class="ri-database-2-line"></i>
             </div>
             <h3 class="skill-title">SQL</h3>
             <p class="skill-cat">Base de données</p>
             <div class="skill-dots" aria-hidden="true">
-              <span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span
-                class="dot"></span>
+              <span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span>
             </div>
           </article>
 
-          <article class="skill-card figma" role="listitem" data-level="4" aria-label="Figma niveau 4 sur 5">
-            <div class="skill-icon">
-              <i class="ri-figma-line" aria-hidden="true"></i>
+          <article class="skill-card figma" data-level="4" aria-label="Figma niveau 4 sur 5">
+            <div class="skill-icon" aria-hidden="true">
+              <i class="ri-figma-line"></i>
             </div>
             <h3 class="skill-title">Figma</h3>
             <p class="skill-cat">Design</p>
             <div class="skill-dots" aria-hidden="true">
-              <span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span
-                class="dot"></span>
+              <span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span>
             </div>
           </article>
 
-          <article class="skill-card responsive" role="listitem" data-level="3"
-            aria-label="Responsive Design niveau 3 sur 5">
-            <div class="skill-icon">
-              <i class="ri-smartphone-line" aria-hidden="true"></i>
+          <article class="skill-card responsive" data-level="3" aria-label="Responsive Design niveau 3 sur 5">
+            <div class="skill-icon" aria-hidden="true">
+              <i class="ri-smartphone-line"></i>
             </div>
             <h3 class="skill-title">Responsive Design</h3>
             <p class="skill-cat">UX/UI</p>
             <div class="skill-dots" aria-hidden="true">
-              <span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span
-                class="dot"></span>
+              <span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span>
             </div>
           </article>
         </div>
       </div>
 
       <!-- À venir / En cours -->
-      <div class="skills-future" aria-labelledby="skills-future-title">
-        <h3 id="skills-future-title" class="skills-future-title">À venir</h3>
-        <div class="future-grid" role="list">
-          <article class="future-card" role="listitem" aria-label="Certification OPQUAST en préparation">
+      <div class="skills-future">
+        <h3 class="skills-future-title">À venir</h3>
+        <div class="future-grid">
+          <article class="future-card">
             <div class="skill-icon" aria-hidden="true">
               <i class="ri-award-line"></i>
             </div>
             <h4 class="future-title">OPQUAST</h4>
-            
+            <p class="future-note">En préparation</p>
+            <p>Depuis la première année, je suis formée au respect des règles OPQUAST, pendant cette année je vais faire la formation pour obtenir la certification. </p>
           </article>
 
-          <article class="future-card" role="listitem" aria-label="Three.js en apprentissage">
+          <article class="future-card">
             <div class="skill-icon" aria-hidden="true">
               <i class="ri-cube-3-line"></i>
             </div>
@@ -545,19 +547,17 @@
             <p class="future-note">En cours d'apprentissage</p>
           </article>
 
-          <article class="future-card" role="listitem" aria-label="React.js en apprentissage">
+          <article class="future-card">
             <div class="skill-icon" aria-hidden="true">
               <i class="ri-reactjs-line"></i>
             </div>
             <h4 class="future-title">React.js</h4>
             <p class="future-note">En cours d'apprentissage</p>
           </article>
-          <article class="future-card" role="listitem" aria-label="React.js en apprentissage">
+
+          <article class="future-card">
             <div class="skill-icon" aria-hidden="true">
-              <img
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
-                alt="Logo Node.js"
-              />
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Logo Node.js" />
             </div>
             <h4 class="future-title">Node.js</h4>
             <p class="future-note">En cours d'apprentissage</p>
