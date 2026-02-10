@@ -7,13 +7,18 @@ video {
   display: block;
 }
 h1,
-h2,
-h3 {
+h2 {
   font-family: "Space Grotesk", sans-serif;
   font-weight: 700;
   color: #fff;
   margin-top: 0;
   text-align: center;
+}
+h3 {
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 600;
+  color: #fff;
+  margin-top: 0;
 }
 
 /* RESET & BASE */
@@ -23,7 +28,7 @@ h3 {
   box-sizing: border-box;
 }
 :root {
-  --bg-dark: #050006;
+  --bg-dark: #050006; 
   --bg-mid: #1a0720;
   --bg-accent: #3b1150;
   --violet: #9f7cff;
@@ -33,7 +38,7 @@ h3 {
   --crea-accent: #ff6f91;
   --crea-accent-soft: rgba(255, 111, 145, 0.45);
   --text-main: #fff;
-  --text-muted: #d9d9e3;
+  --text-muted: #e3e3ef;
   --glass: rgba(255, 255, 255, 0.07);
   --glass-border: rgba(255, 255, 255, 0.12);
   --radius-lg: 18px;
@@ -41,6 +46,15 @@ h3 {
   --header-height: 72px;
   --dot-active: linear-gradient(180deg, #e08bff 0%, #7f7cfb 100%);
   --dot-inactive: rgba(207, 217, 255, 0.25);
+  --fs-xs: 0.85rem;
+  --fs-sm: 0.95rem;
+  --fs-base: 1.05rem;
+  --fs-md: 1.18rem;
+  --fs-lg: 1.45rem;
+  --fs-xl: 1.75rem;
+  --fs-2xl: 2.35rem;
+  --fs-3xl: 3rem;
+  --fs-hero: clamp(2.8rem, 5.6vw, 4.2rem);
 }
 html {
   scroll-behavior: smooth;
@@ -51,12 +65,18 @@ body {
   min-height: 100vh;
   font-family: "Glory", "Space Grotesk", sans-serif;
   padding: 0;
-  line-height: 1.5;
+  font-size: var(--fs-base);
+  line-height: 1.7;
   color: var(--text-main);
   background:
     radial-gradient(1200px 600px at 20% -10%, #6b1bb0 0%, transparent 60%),
     linear-gradient(135deg, var(--bg-dark), var(--bg-mid) 40%, var(--bg-accent));
   background-attachment: fixed;
+}
+
+p,
+li {
+  font-size: var(--fs-base);
 }
 
 /* ANIMATIONS */
@@ -161,7 +181,7 @@ nav {
 nav a {
   color: var(--text-muted);
   text-decoration: none;
-  font-size: 1.05rem;
+  font-size: var(--fs-sm);
   letter-spacing: 0.2px;
   position: relative;
   transition: transform 0.25s ease, color 0.25s ease;
@@ -191,7 +211,7 @@ nav a:focus-visible {
 
 /* ACCUEIL */
 .accueil {
-  padding: 140px 100px;
+  padding: 110px 80px;
   min-width: 500px;
   display: flex;
   flex-direction: column;
@@ -219,7 +239,7 @@ nav a:focus-visible {
 }
 
 .accueil h1 {
-  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-size: var(--fs-hero);
   line-height: 1.1;
   margin: 0;
   text-align: left;
@@ -237,7 +257,7 @@ nav a:focus-visible {
 }
 
 .accueil-description {
-  font-size: 1.1rem;
+  font-size: var(--fs-md);
   color: var(--text-muted);
   line-height: 1.6;
   margin: 0;
@@ -252,7 +272,7 @@ nav a:focus-visible {
   background: rgba(255, 255, 255, 0.06);
   border: 1px solid rgba(255, 255, 255, 0.15);
   color: #eef0ff;
-  font-size: 0.95rem;
+  font-size: var(--fs-xs);
   font-weight: 600;
   letter-spacing: 0.2px;
   width: fit-content;
@@ -449,8 +469,6 @@ nav a:focus-visible {
     opacity: 1;
   }
 }
-@media (prefers-reduced-motion: reduce) {
-  html {
 .card-grid .card:nth-child(1),
 .project-grid .work-card:nth-child(1),
 .skills-grid .skill-card:nth-child(1),
@@ -482,6 +500,8 @@ nav a:focus-visible {
 .future-grid .future-card:nth-child(4) {
   animation-delay: 0.24s;
 }
+@media (prefers-reduced-motion: reduce) {
+  html {
     scroll-behavior: auto;
   }
   .scroll-down {
@@ -504,7 +524,7 @@ nav a:focus-visible {
   border-radius: 12px;
   text-decoration: none;
   font-weight: 600;
-  font-size: 1rem;
+  font-size: var(--fs-sm);
   transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease, border-color 0.3s ease;
   border: 2px solid transparent;
 }
@@ -560,7 +580,7 @@ nav a:focus-visible {
   padding: 8px 12px;
   border-radius: 8px;
   text-decoration: none;
-  font-size: 0.95rem;
+  font-size: var(--fs-sm);
   transition:
     background-color 0.2s ease,
     color 0.2s ease,
@@ -600,7 +620,7 @@ nav a:focus-visible {
 }
 .about h2 {
   margin-bottom: 16px;
-  font-size: 2.8rem;
+  font-size: var(--fs-3xl);
   position: relative;
   display: inline-block;
 }
@@ -616,7 +636,7 @@ nav a:focus-visible {
   border-radius: 2px;
 }
 .about > p {
-  font-size: 1.1rem;
+  font-size: var(--fs-md);
   text-align: center;
   max-width: 800px;
   color: var(--text-muted);
@@ -675,7 +695,7 @@ nav a:focus-visible {
 }
 .card-title {
   margin: 0 0 8px 0;
-  font-size: 1.1rem;
+  font-size: var(--fs-lg);
 }
 .card-text {
   color: #d9d9e3;
@@ -685,13 +705,13 @@ nav a:focus-visible {
 
 /* PROJETS */
 .projects {
-  padding: 80px 40px;
+  padding: 60px 36px;
   scroll-margin-top: var(--header-height);
   text-align: center;
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.02) 0%, transparent 100%);
 }
 .projects h2 {
-  font-size: 2.8rem;
+  font-size: var(--fs-3xl);
   position: relative;
   display: inline-block;
   margin-bottom: 16px;
@@ -709,13 +729,13 @@ nav a:focus-visible {
 }
 .projects-subtitle {
   color: #d9d9e3;
-  margin: 8px auto 40px;
+  margin: 8px auto 28px;
   max-width: 900px;
-  font-size: 1.1rem;
+  font-size: var(--fs-md);
 }
 .projects-intro {
   max-width: 900px;
-  margin: 0 auto 36px;
+  margin: 0 auto 24px;
   display: grid;
   gap: 8px;
   text-align: center;
@@ -725,7 +745,7 @@ nav a:focus-visible {
   justify-content: center;
   gap: 16px;
   flex-wrap: wrap;
-  margin: 0 auto 32px;
+  margin: 0 auto 20px;
 }
 .switch-btn {
   border: 1px solid rgba(255, 255, 255, 0.2);
@@ -733,7 +753,7 @@ nav a:focus-visible {
   color: var(--text-main);
   padding: 10px 22px;
   border-radius: 999px;
-  font-size: 1rem;
+  font-size: var(--fs-sm);
   font-weight: 600;
   letter-spacing: 0.2px;
   cursor: pointer;
@@ -780,7 +800,7 @@ nav a:focus-visible {
 .project-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 32px;
+  gap: 24px;
   margin-top: 12px;
 }
 .work-card {
@@ -866,11 +886,11 @@ nav a:focus-visible {
   display: none;
 }
 .work-body {
-  padding: 18px;
+  padding: 16px;
 }
 .work-title {
   margin: 0 0 4px 0;
-  font-size: 1.1rem;
+  font-size: var(--fs-lg);
   text-align: left;
 }
 .work-link {
@@ -893,17 +913,18 @@ nav a:focus-visible {
 
 /* TESTIMONIALS */
 .testimonials {
-  padding: 40px;
+  padding: 28px;
   text-align: center;
   scroll-margin-top: var(--header-height);
 }
 .testimonials h2 {
-  font-size: 2.5rem;
+  font-size: var(--fs-3xl);
 }
 .testimonials-subtitle {
   color: #d9d9e3;
   margin: 8px auto 20px;
   max-width: 900px;
+  font-size: var(--fs-md);
 }
 .testimonials-container {
   width: min(1100px, 100%);
@@ -940,6 +961,7 @@ nav a:focus-visible {
 .quote {
   margin: 0;
   color: #eaeaf6;
+  font-size: var(--fs-sm);
   line-height: 1.5;
 }
 .author-row {
@@ -970,18 +992,18 @@ nav a:focus-visible {
 .author-meta .role {
   display: block;
   color: #c9c9d5;
-  font-size: 0.9rem;
+  font-size: var(--fs-sm);
 }
 
 /* COMPETENCES */
 .competences {
-  padding: 80px 40px;
+  padding: 60px 36px;
   text-align: center;
   scroll-margin-top: var(--header-height);
   background: linear-gradient(180deg, transparent 0%, rgba(255, 255, 255, 0.02) 100%);
 }
 .competences h2 {
-  font-size: 2.8rem;
+  font-size: var(--fs-3xl);
   position: relative;
   display: inline-block;
   margin-bottom: 16px;
@@ -999,14 +1021,14 @@ nav a:focus-visible {
 }
 .competences h3,
 .skills-future h3 {
-  font-size: 1.6rem;
+  font-size: var(--fs-xl);
 }
 .skills-subtitle {
   text-align: center;
   color: #d9d9e3;
-  margin: 8px auto 40px;
+  margin: 8px auto 28px;
   max-width: 800px;
-  font-size: 1.1rem;
+  font-size: var(--fs-md);
 }
 .skills-container {
   width: min(1200px, 100%);
@@ -1086,13 +1108,13 @@ nav a:focus-visible {
 }
 .skill-title {
   margin: 4px 0 0 0;
-  font-size: 1.05rem;
+  font-size: var(--fs-sm);
   text-align: left;
 }
 .skill-cat {
   margin: 0;
   color: #c9c9d5;
-  font-size: 0.9rem;
+  font-size: var(--fs-xs);
 }
 .skill-dots {
   display: flex;
@@ -1143,11 +1165,11 @@ nav a:focus-visible {
 
 /* FUTURE SKILLS */
 .skills-future {
-  margin-top: 60px;
+  margin-top: 40px;
 }
 .skills-future-title {
   margin: 0 0 20px 0;
-  font-size: 1.6rem;
+  font-size: var(--fs-xl);
 }
 .future-grid {
   display: grid;
@@ -1191,13 +1213,13 @@ nav a:focus-visible {
 }
 .future-title {
   margin: 4px 0 0 0;
-  font-size: 1.05rem;
+  font-size: var(--fs-sm);
   font-weight: 600;
 }
 .future-note {
   margin: 0;
   color: var(--text-muted);
-  font-size: 0.9rem;
+  font-size: var(--fs-xs);
 }
 .future-card.opquast {
   --accent: #9f7cff;
@@ -1223,12 +1245,12 @@ nav a:focus-visible {
 
 /* EXPERIENCE */
 .experience {
-  padding: 40px;
+  padding: 28px;
   text-align: center;
   scroll-margin-top: var(--header-height);
 }
 .experience h2 {
-  font-size: 2.5rem;
+  font-size: var(--fs-3xl);
 }
 .experience-grid {
   width: min(1100px, 100%);
@@ -1237,7 +1259,7 @@ nav a:focus-visible {
   display: grid;
   justify-items: center;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 20px;
+  gap: 16px;
 }
 .experience-card {
   max-width: 520px;
@@ -1258,7 +1280,7 @@ nav a:focus-visible {
 }
 .experience-title {
   margin: 0 0 6px 0;
-  font-size: 1.1rem;
+  font-size: var(--fs-lg);
 }
 .experience-company {
   margin: 0 0 10px 0;
@@ -1281,7 +1303,7 @@ nav a:focus-visible {
   scroll-margin-top: var(--header-height);
 }
 .parcours h2 {
-  font-size: 2.5rem;
+  font-size: var(--fs-3xl);
 }
 .parcours .timeline {
   width: min(1100px, 100%);
@@ -1309,7 +1331,7 @@ nav a:focus-visible {
 }
 .parcours .timeline-item h3 {
   margin: 0 0 6px 0;
-  font-size: 1.1rem;
+  font-size: var(--fs-md);
 }
 .parcours .timeline-item time {
   color: var(--violet-light);
@@ -1322,7 +1344,7 @@ nav a:focus-visible {
   scroll-margin-top: var(--header-height);
 }
 .cv h2 {
-  font-size: 2.5rem;
+  font-size: var(--fs-3xl);
 }
 .cv .cv-actions {
   display: flex;
@@ -1339,14 +1361,14 @@ nav a:focus-visible {
   scroll-margin-top: var(--header-height);
 }
 .contact h2 {
-  font-size: 2.5rem;
+  font-size: var(--fs-3xl);
 }
 
 /* FOOTER */
 .site-footer {
   padding: 20px 40px;
   text-align: center;
-  font-size: 0.9rem;
+  font-size: var(--fs-sm);
   color: #c9c9d5;
   border-top: 1px solid rgba(255, 255, 255, 0.12);
 }
@@ -1364,7 +1386,7 @@ nav a:focus-visible {
 }
 .tag {
   padding: 6px 12px;
-  font-size: 0.85rem;
+  font-size: var(--fs-xs);
   border-radius: 999px;
   color: var(--violet-light);
   background: rgba(255, 255, 255, 0.12);
@@ -1375,7 +1397,7 @@ nav a:focus-visible {
 /* RESPONSIVE */
 @media (max-width: 1024px) {
   nav a {
-    font-size: 1.1rem;
+    font-size: var(--fs-sm);
     margin: 0 10px;
   }
   .skills-grid,

@@ -1,0 +1,198 @@
+[
+  {
+    "category": "dev",
+    "title": "Dans mon monde musical",
+    "excerpt": "Mini-site vitrine autour de mes goûts musicaux, avec mise en page responsive, cartes illustrées et navigation accessible.",
+    "image": "image/monde.png",
+    "imageAlt": "Logo du projet Dans mon monde musical",
+    "detailsUrl": "projets/monde_musical.html",
+    "tags": ["HTML", "CSS", "JavaScript"],
+    "actions": [
+      {
+        "label": "Voir détails",
+        "url": "projets/monde_musical.html",
+        "icon": "ri-file-list-line",
+        "style": "ghost"
+      },
+      {
+        "label": "Code",
+        "url": "https://github.com/allaxan/mon-monde-musical",
+        "icon": "ri-code-box-line",
+        "style": "ghost",
+        "external": true
+      },
+      {
+        "label": "Démo",
+        "url": "https://allaxan.github.io/mon-monde-musical/",
+        "icon": "ri-external-link-line",
+        "style": "primary",
+        "external": true
+      }
+    ]
+  },
+  {
+    "category": "dev",
+    "title": "Staytistics",
+    "excerpt": "Statistiques sur l'évolution des auditeurs du groupe Stray Kids via des graphiques interactifs basés sur des données JSON et l'API Deezer.",
+    "image": "image/staytistics.png",
+    "imageAlt": "Logo du projet Staytistics",
+    "detailsUrl": "projets/staytistics.html",
+    "tags": ["HTML", "CSS", "JavaScript", "JSON", "API"],
+    "actions": [
+      {
+        "label": "Voir détails",
+        "url": "staytistics.html",
+        "icon": "ri-file-list-line",
+        "style": "ghost"
+      },
+      {
+        "label": "Code",
+        "url": "https://github.com/MMI-projets/Staytistics",
+        "icon": "ri-code-box-line",
+        "style": "ghost",
+        "external": true
+      },
+      {
+        "label": "Démo",
+        "url": "https://mmi-projets.github.io/Staytistics/",
+        "icon": "ri-external-link-line",
+        "style": "primary",
+        "external": true
+      }
+    ]
+  },
+  {
+    "category": "dev",
+    "title": "Au Hasard des Saveurs",
+    "excerpt": "Plateforme de recettes personnalisées selon goûts, compétences et matériel, avec favoris, likes et recommandations évolutives.",
+    "image": "image/au-hasard-des-saveurs.png",
+    "imageAlt": "Aperçu du projet Au Hasard des Saveurs",
+    "detailsUrl": "projets/auhasarddessaveurs.html",
+    "tags": ["HTML", "CSS", "JavaScript", "PHP", "MySQL"],
+    "actions": [
+      {
+        "label": "Voir détails",
+        "url": "projets/auhasarddessaveurs.html",
+        "icon": "ri-file-list-line",
+        "style": "ghost"
+      },
+      {
+        "label": "Code",
+        "url": "https://github.com/MMI-projets/Au-Hasard-des-Saveurs",
+        "icon": "ri-code-box-line",
+        "style": "ghost",
+        "external": true
+      },
+      {
+        "label": "Démo",
+        "url": "https://au-hasard-des-saveurs.acfiol.fr/",
+        "icon": "ri-external-link-line",
+        "style": "primary",
+        "external": true
+      }
+    ]
+  },
+  {
+    "category": "dev",
+    "title": "AllWomenFootball",
+    "excerpt": "Site dédié au football féminin : actualités, équipes, compétitions, calendrier des matchs et profils de joueuses.",
+    "image": "image/logo.png",
+    "imageAlt": "Aperçu du projet AllWomenFootball (football féminin)",
+    "detailsUrl": "projets/allwomenfootball.html",
+    "mediaClass": "awf-media",
+    "tags": ["HTML", "CSS", "JavaScript", "PHP", "MySQL"],
+    "actions": [
+      {
+        "label": "Voir détails",
+        "url": "projets/allwomenfootball.html",
+        "icon": "ri-file-list-line",
+        "style": "ghost"
+      },
+      {
+        "label": "Code",
+        "url": "https://github.com/allaxan/WebInventory",
+        "icon": "ri-code-box-line",
+        "style": "ghost",
+        "external": true
+      },
+      {
+        "label": "Démo",
+        "url": "https://fiol.projetsmmichamps.fr/webinventory/index.php",
+        "icon": "ri-external-link-line",
+        "style": "primary",
+        "external": true
+      }
+    ]
+  },
+  {
+    "category": "creative",
+    "title": "De l'ombre à la lumière",
+    "excerpt": "Court métrage jouant sur les contrastes lumière/ombre, avec tournage, montage et post-production complets.",
+    "image": "https://img.youtube.com/vi/rlYixFYywbM/hqdefault.jpg",
+    "imageAlt": "Vignette du projet De l'ombre à la lumière",
+    "detailsUrl": "projets/de-l-ombre-a-la-lumiere.html",
+    "tags": ["Jeu d'actrice", "Montage", "After Effects", "Sound design"],
+    "actions": [
+      {
+        "label": "Voir détails",
+        "url": "projets/de-l-ombre-a-la-lumiere.html",
+        "icon": "ri-file-list-line",
+        "style": "ghost"
+      },
+      {
+        "label": "Vidéo",
+        "url": "https://youtu.be/rlYixFYywbM",
+        "icon": "ri-external-link-line",
+        "style": "primary",
+        "external": true
+      }
+    ]
+  },
+  {
+    "category": "creative",
+    "title": "Interview d'un journaliste",
+    "excerpt": "Format interview avec captation audio, montage et habillage pour une diffusion en ligne.",
+    "image": "https://img.youtube.com/vi/PrOMjYDizBM/hqdefault.jpg",
+    "imageAlt": "Vignette du projet Interview d'un journaliste",
+    "detailsUrl": "projets/interview-journaliste.html",
+    "tags": ["Interview", "Premiere Pro", "After Effects", "BandLab"],
+    "actions": [
+      {
+        "label": "Voir détails",
+        "url": "projets/interview-journaliste.html",
+        "icon": "ri-file-list-line",
+        "style": "ghost"
+      },
+      {
+        "label": "Vidéo",
+        "url": "https://youtu.be/PrOMjYDizBM",
+        "icon": "ri-external-link-line",
+        "style": "primary",
+        "external": true
+      }
+    ]
+  },
+  {
+    "category": "creative",
+    "title": "Analyse filmique",
+    "excerpt": "Analyse filmique du film Avatar de James Cameron.",
+    "image": "https://placehold.co/960x540/3b1150/ffffff?text=Analyse+filmique",
+    "imageAlt": "Vignette du projet Analyse filmique",
+    "detailsUrl": "projets/analyse-filmique.html",
+    "tags": ["Culture artistique", "Indesign", "Illustrator"],
+    "actions": [
+      {
+        "label": "Voir détails",
+        "url": "projets/analyse-filmique.html",
+        "icon": "ri-file-list-line",
+        "style": "ghost"
+      },
+      {
+        "label": "Vidéo",
+        "url": "pdf/analyse-filmique-avatar.pdf",
+        "icon": "ri-external-link-line",
+        "style": "primary"
+      }
+    ]
+  }
+]
