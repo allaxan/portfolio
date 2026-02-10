@@ -233,15 +233,29 @@
     </section>
 
     <!-- 💼 Projets -->
-    <section id="projet" class="projects">
-      <h2>Mes projets</h2>
-      <p class="projects-subtitle">
-        Découvrez une sélection de mes projets récents, mêlant créativité,
-        technologie et passion.
-      </p>
+    <section id="projet" class="projects projects-toggle">
+      <div class="projects-intro">
+        <span class="section-tag">Projets</span>
+        <h2>Mes projets</h2>
+        <p class="projects-subtitle">
+          Choisissez l'univers a decouvrir : developpement web ou creation.
+        </p>
+      </div>
 
-      <div class="projects-container">
-        <div class="project-grid" role="list">
+      <div class="projects-switch" role="tablist" aria-label="Filtre projets">
+        <button class="switch-btn is-active" type="button" role="tab" aria-selected="true"
+          aria-controls="projects-dev-panel" data-target="dev">
+          Developpement web
+        </button>
+        <button class="switch-btn" type="button" role="tab" aria-selected="false"
+          aria-controls="projects-creative-panel" data-target="creative">
+          Creation visuelle
+        </button>
+      </div>
+
+      <div class="projects-panel is-active" id="projects-dev-panel" role="tabpanel" aria-label="Projets developpement">
+        <div class="projects-container">
+          <div class="project-grid" role="list">
           <!-- Project 1 -->
           <article class="work-card" role="listitem">
             <figure class="work-media">
@@ -374,20 +388,13 @@
               </div>
             </div>
           </article>
+          </div>
         </div>
       </div>
-    </section>
 
-    <!-- 🎨 Projets créatifs -->
-    <section class="projects creative-projects">
-      <h2>Projets créatifs</h2>
-      <p class="projects-subtitle">
-        Une sélection de projets hors développement web, axés sur la création
-        visuelle et les médias.
-      </p>
-
-      <div class="projects-container">
-        <div class="project-grid" role="list">
+      <div class="projects-panel" id="projects-creative-panel" role="tabpanel" aria-label="Projets creatifs" hidden>
+        <div class="projects-container">
+          <div class="project-grid" role="list">
           <article class="work-card" role="listitem">
             <figure class="work-media">
               <img src="https://img.youtube.com/vi/rlYixFYywbM/hqdefault.jpg" alt="Vignette du projet De l'ombre à la lumière" />
@@ -445,6 +452,34 @@
               </div>
             </div>
           </article>
+
+          <article class="work-card" role="listitem">
+            <figure class="work-media">
+              <img src="" alt="Vignette du projet Interview d'un journaliste" />
+            </figure>
+            <div class="work-body">
+              <h3 class="work-title">
+                <a class="work-link" href="interview-journaliste.html">Analyse filmique</a>
+              </h3>
+              <p class="work-excerpt">
+                Analyse filmique du film Avatar de James Cameron
+              </p>
+              <div class="tags">
+                <span class="tag">Culture artistique</span>
+                <span class="tag">Indesign</span>
+                <span class="tag">Illustrator</span>
+              </div>
+              <div class="work-actions">
+                <a class="btn btn-ghost" href="interview-journaliste.html"><i class="ri-file-list-line"
+                    aria-hidden="true"></i> Voir
+                  détails</a>
+                <a class="btn btn-primary" href="pdf/analyse-filmique-avatar.pdf" target="_blank" rel="noopener"><i
+                    class="ri-external-link-line" aria-hidden="true"></i>
+                  Vidéo</a>
+              </div>
+            </div>
+          </article>
+          </div>
         </div>
       </div>
     </section>
@@ -682,6 +717,32 @@
   <footer class="site-footer">
     <p>&copy; 2025 — Mon Portfolio</p>
   </footer>
+
+  <script>
+    const switchButtons = document.querySelectorAll(".switch-btn");
+    const panels = {
+      dev: document.getElementById("projects-dev-panel"),
+      creative: document.getElementById("projects-creative-panel")
+    };
+
+    switchButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        const target = button.dataset.target;
+
+        switchButtons.forEach((btn) => {
+          const isActive = btn === button;
+          btn.classList.toggle("is-active", isActive);
+          btn.setAttribute("aria-selected", isActive ? "true" : "false");
+        });
+
+        Object.entries(panels).forEach(([key, panel]) => {
+          const isActive = key === target;
+          panel.classList.toggle("is-active", isActive);
+          panel.hidden = !isActive;
+        });
+      });
+    });
+  </script>
 </body>
 
 </html>

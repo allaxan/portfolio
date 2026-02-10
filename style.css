@@ -28,6 +28,10 @@ h3 {
   --bg-accent: #3b1150;
   --violet: #9f7cff;
   --violet-light: #cfd9ff;
+  --dev-accent: #4fc3ff;
+  --dev-accent-soft: rgba(79, 195, 255, 0.4);
+  --crea-accent: #ff6f91;
+  --crea-accent-soft: rgba(255, 111, 145, 0.45);
   --text-main: #fff;
   --text-muted: #d9d9e3;
   --glass: rgba(255, 255, 255, 0.07);
@@ -158,6 +162,7 @@ nav a {
   color: var(--text-muted);
   text-decoration: none;
   font-size: 1.05rem;
+  letter-spacing: 0.2px;
   position: relative;
   transition: transform 0.25s ease, color 0.25s ease;
 }
@@ -291,12 +296,13 @@ nav a:focus-visible {
   border: 4px solid rgba(255, 255, 255, 0.15);
   position: relative;
   z-index: 2;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   animation: soft-glow 6s ease-in-out infinite;
 }
 
 .profile-photo:hover {
   transform: scale(1.05);
+  box-shadow: 0 30px 90px rgba(159, 124, 255, 0.35);
 }
 
 .profile-decoration {
@@ -499,7 +505,7 @@ nav a:focus-visible {
   text-decoration: none;
   font-weight: 600;
   font-size: 1rem;
-  transition: all 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease, border-color 0.3s ease;
   border: 2px solid transparent;
 }
 
@@ -529,13 +535,13 @@ nav a:focus-visible {
 
 .accueil-link.secondary {
   color: var(--text-main);
-  background: rgba(255, 255, 255, 0.05);
-  border-color: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.25);
 }
 
 .accueil-link.secondary:hover {
-  background: rgba(255, 255, 255, 0.1);
-  border-color: rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.38);
   transform: translateY(-2px);
 }
 
@@ -558,7 +564,9 @@ nav a:focus-visible {
   transition:
     background-color 0.2s ease,
     color 0.2s ease,
-    border-color 0.2s ease;
+    border-color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 }
 .btn-ghost {
   color: #cfd9ff;
@@ -567,6 +575,8 @@ nav a:focus-visible {
 }
 .btn-ghost:hover {
   background: rgba(255, 255, 255, 0.08);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 .btn-primary {
   color: #1a0720;
@@ -574,6 +584,8 @@ nav a:focus-visible {
 }
 .btn-primary:hover {
   background: linear-gradient(135deg, #fff, #9cb0ff);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(159, 124, 255, 0.3);
 }
 
 /* A PROPOS */
@@ -653,6 +665,10 @@ nav a:focus-visible {
   height: 100%;
   object-fit: cover;
   display: block;
+  transition: transform 0.4s ease;
+}
+.card:hover .card-media img {
+  transform: scale(1.05);
 }
 .card-body {
   padding: 20px;
@@ -696,6 +712,65 @@ nav a:focus-visible {
   margin: 8px auto 40px;
   max-width: 900px;
   font-size: 1.1rem;
+}
+.projects-intro {
+  max-width: 900px;
+  margin: 0 auto 36px;
+  display: grid;
+  gap: 8px;
+  text-align: center;
+}
+.projects-switch {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin: 0 auto 32px;
+}
+.switch-btn {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--text-main);
+  padding: 10px 22px;
+  border-radius: 999px;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+.switch-btn:hover {
+  transform: translateY(-2px);
+  border-color: rgba(255, 255, 255, 0.4);
+}
+.switch-btn.is-active {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), var(--violet));
+  color: #1b0f2b;
+  border-color: transparent;
+  box-shadow: 0 10px 30px rgba(159, 124, 255, 0.35);
+}
+.projects-panel {
+  animation: fade-up 0.6s ease both;
+}
+.section-tag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  margin: 0 auto;
+  padding: 6px 16px;
+  font-size: 0.85rem;
+  letter-spacing: 0.35px;
+  text-transform: uppercase;
+  border-radius: 999px;
+  color: #0c0c14;
+  background: linear-gradient(120deg, #fff 0%, var(--section-accent) 100%);
+}
+.projects-dev {
+  --section-accent: var(--dev-accent);
+  background:
+    radial-gradient(600px 220px at 20% -10%, rgba(79, 195, 255, 0.18) 0%, transparent 60%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.02) 0%, transparent 100%);
 }
 .projects-container {
   width: min(1200px, 100%);
@@ -758,6 +833,10 @@ nav a:focus-visible {
   aspect-ratio: 16/9;
   object-fit: cover;
   display: block;
+  transition: transform 0.4s ease;
+}
+.work-card:hover .work-media img {
+  transform: scale(1.04);
 }
 .work-media::after {
   content: "";
@@ -800,6 +879,7 @@ nav a:focus-visible {
 }
 .work-link:hover {
   text-decoration: underline;
+  text-decoration-color: rgba(255, 255, 255, 0.6);
 }
 .work-excerpt {
   color: #d9d9e3;
