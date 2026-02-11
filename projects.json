@@ -5,12 +5,12 @@
     "excerpt": "Mini-site vitrine autour de mes goûts musicaux, avec mise en page responsive, cartes illustrées et navigation accessible.",
     "image": "image/monde.png",
     "imageAlt": "Logo du projet Dans mon monde musical",
-    "detailsUrl": "projets/monde_musical.html",
+    "detailsUrl": "projects/monde_musical.html",
     "tags": ["HTML", "CSS", "JavaScript"],
     "actions": [
       {
         "label": "Voir détails",
-        "url": "projets/monde_musical.html",
+        "url": "projects/monde_musical.html",
         "icon": "ri-file-list-line",
         "style": "ghost"
       },
@@ -36,12 +36,12 @@
     "excerpt": "Statistiques sur l'évolution des auditeurs du groupe Stray Kids via des graphiques interactifs basés sur des données JSON et l'API Deezer.",
     "image": "image/staytistics.png",
     "imageAlt": "Logo du projet Staytistics",
-    "detailsUrl": "projets/staytistics.html",
+    "detailsUrl": "projects/staytistics.html",
     "tags": ["HTML", "CSS", "JavaScript", "JSON", "API"],
     "actions": [
       {
         "label": "Voir détails",
-        "url": "staytistics.html",
+        "url": "projects/staytistics.html",
         "icon": "ri-file-list-line",
         "style": "ghost"
       },
@@ -67,12 +67,12 @@
     "excerpt": "Plateforme de recettes personnalisées selon goûts, compétences et matériel, avec favoris, likes et recommandations évolutives.",
     "image": "image/au-hasard-des-saveurs.png",
     "imageAlt": "Aperçu du projet Au Hasard des Saveurs",
-    "detailsUrl": "projets/auhasarddessaveurs.html",
+    "detailsUrl": "projects/auhasarddessaveurs.html",
     "tags": ["HTML", "CSS", "JavaScript", "PHP", "MySQL"],
     "actions": [
       {
         "label": "Voir détails",
-        "url": "projets/auhasarddessaveurs.html",
+        "url": "projects/auhasarddessaveurs.html",
         "icon": "ri-file-list-line",
         "style": "ghost"
       },
@@ -98,13 +98,13 @@
     "excerpt": "Site dédié au football féminin : actualités, équipes, compétitions, calendrier des matchs et profils de joueuses.",
     "image": "image/logo.png",
     "imageAlt": "Aperçu du projet AllWomenFootball (football féminin)",
-    "detailsUrl": "projets/allwomenfootball.html",
+    "detailsUrl": "projects/allwomenfootball.html",
     "mediaClass": "awf-media",
     "tags": ["HTML", "CSS", "JavaScript", "PHP", "MySQL"],
     "actions": [
       {
         "label": "Voir détails",
-        "url": "projets/allwomenfootball.html",
+        "url": "projects/allwomenfootball.html",
         "icon": "ri-file-list-line",
         "style": "ghost"
       },
@@ -130,12 +130,12 @@
     "excerpt": "Court métrage jouant sur les contrastes lumière/ombre, avec tournage, montage et post-production complets.",
     "image": "https://img.youtube.com/vi/rlYixFYywbM/hqdefault.jpg",
     "imageAlt": "Vignette du projet De l'ombre à la lumière",
-    "detailsUrl": "projets/de-l-ombre-a-la-lumiere.html",
+    "detailsUrl": "projects/de-l-ombre-a-la-lumiere.html",
     "tags": ["Jeu d'actrice", "Montage", "After Effects", "Sound design"],
     "actions": [
       {
         "label": "Voir détails",
-        "url": "projets/de-l-ombre-a-la-lumiere.html",
+        "url": "projects/de-l-ombre-a-la-lumiere.html",
         "icon": "ri-file-list-line",
         "style": "ghost"
       },
@@ -154,12 +154,12 @@
     "excerpt": "Format interview avec captation audio, montage et habillage pour une diffusion en ligne.",
     "image": "https://img.youtube.com/vi/PrOMjYDizBM/hqdefault.jpg",
     "imageAlt": "Vignette du projet Interview d'un journaliste",
-    "detailsUrl": "projets/interview-journaliste.html",
+    "detailsUrl": "projects/interview-journaliste.html",
     "tags": ["Interview", "Premiere Pro", "After Effects", "BandLab"],
     "actions": [
       {
         "label": "Voir détails",
-        "url": "projets/interview-journaliste.html",
+        "url": "projects/interview-journaliste.html",
         "icon": "ri-file-list-line",
         "style": "ghost"
       },
@@ -178,12 +178,12 @@
     "excerpt": "Analyse filmique du film Avatar de James Cameron.",
     "image": "https://placehold.co/960x540/3b1150/ffffff?text=Analyse+filmique",
     "imageAlt": "Vignette du projet Analyse filmique",
-    "detailsUrl": "projets/analyse-filmique.html",
+    "detailsUrl": "projects/analyse-filmique.html",
     "tags": ["Culture artistique", "Indesign", "Illustrator"],
     "actions": [
       {
         "label": "Voir détails",
-        "url": "projets/analyse-filmique.html",
+        "url": "projects/analyse-filmique.html",
         "icon": "ri-file-list-line",
         "style": "ghost"
       },

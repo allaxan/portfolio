@@ -5,6 +5,8 @@
   max-width: 1200px;
   margin-inline: auto;
   padding: 60px 40px;
+  font-size: var(--fs-base);
+  line-height: 1.7;
 }
 
 .project-hero {
@@ -41,16 +43,16 @@
   border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: 999px;
   color: var(--violet-light);
-  font-size: 0.9rem;
+  font-size: var(--fs-sm);
   font-weight: 600;
   margin-bottom: 12px;
 }
 
 .project-hero .lead {
-  font-size: 1.1rem;
+  font-size: var(--fs-md);
   color: var(--text-muted);
   margin: 12px 0 18px;
-  line-height: 1.6;
+  line-height: 1.7;
 }
 
 .project-actions {
@@ -123,15 +125,15 @@
 
 .meta-card h3 {
   margin: 0 0 12px 0;
-  font-size: 1.1rem;
+  font-size: var(--fs-md);
   text-align: left;
 }
 
 .meta-card p {
   margin: 0;
   color: var(--text-muted);
-  font-size: 0.95rem;
-  line-height: 1.5;
+  font-size: var(--fs-base);
+  line-height: 1.6;
 }
 
 .project-summary {
@@ -141,7 +143,7 @@
 .project-summary h2 {
   margin-top: 0;
   margin-bottom: 20px;
-  font-size: 2.2rem;
+  font-size: var(--fs-2xl);
   position: relative;
   display: inline-block;
 }
@@ -160,15 +162,15 @@
 .project-summary h3 {
   margin-top: 28px;
   margin-bottom: 12px;
-  font-size: 1.3rem;
+  font-size: var(--fs-lg);
   text-align: left;
 }
 
 .project-summary p,
 .project-summary li {
   color: var(--text-muted);
-  line-height: 1.6;
-  font-size: 1rem;
+  line-height: 1.7;
+  font-size: var(--fs-base);
 }
 
 .project-summary ul {
@@ -183,6 +185,24 @@
   margin-top: 60px;
   padding-top: 40px;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.project-pdf {
+  margin-bottom: 60px;
+}
+
+.pdf-embed {
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
+  background: rgba(8, 6, 16, 0.6);
+}
+
+.pdf-embed object {
+  width: 100%;
+  height: min(70vh, 900px);
+  display: block;
 }
 
 .links-row {

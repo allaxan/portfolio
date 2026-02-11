@@ -46,10 +46,10 @@ h3 {
   --header-height: 72px;
   --dot-active: linear-gradient(180deg, #e08bff 0%, #7f7cfb 100%);
   --dot-inactive: rgba(207, 217, 255, 0.25);
-  --fs-xs: 0.85rem;
-  --fs-sm: 0.95rem;
-  --fs-base: 1.05rem;
-  --fs-md: 1.18rem;
+  --fs-xs: 0.9rem;
+  --fs-sm: 1rem;
+  --fs-base: 1.1rem;
+  --fs-md: 1.25rem;
   --fs-lg: 1.45rem;
   --fs-xl: 1.75rem;
   --fs-2xl: 2.35rem;
@@ -72,6 +72,7 @@ body {
     radial-gradient(1200px 600px at 20% -10%, #6b1bb0 0%, transparent 60%),
     linear-gradient(135deg, var(--bg-dark), var(--bg-mid) 40%, var(--bg-accent));
   background-attachment: fixed;
+  overflow-x: hidden;
 }
 
 p,
@@ -212,7 +213,7 @@ nav a:focus-visible {
 /* ACCUEIL */
 .accueil {
   padding: 110px 80px;
-  min-width: 500px;
+  min-width: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -524,7 +525,7 @@ nav a:focus-visible {
   border-radius: 12px;
   text-decoration: none;
   font-weight: 600;
-  font-size: var(--fs-sm);
+  font-size: var(--fs-base);
   transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease, border-color 0.3s ease;
   border: 2px solid transparent;
 }
@@ -663,22 +664,11 @@ nav a:focus-visible {
   );
   border-radius: 20px;
   overflow: hidden;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
-  transition: all 0.3s ease;
   border: 1px solid rgba(255, 255, 255, 0.1);
-}
-.card:hover {
-  transform: translateY(-8px) scale(1.02);
-  box-shadow: 0 20px 60px rgba(159, 124, 255, 0.3);
-  border-color: rgba(159, 124, 255, 0.4);
-}
-.card-media {
-  width: 100%;
-  aspect-ratio: 16/9;
-  margin: 0;
-  border-top-left-radius: inherit;
-  border-top-right-radius: inherit;
-  overflow: hidden;
+  text-align: left;
+  transition: all 0.3s ease;
+  position: relative;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
 }
 .card-media img {
   width: 100%;
@@ -1386,7 +1376,7 @@ nav a:focus-visible {
 }
 .tag {
   padding: 6px 12px;
-  font-size: var(--fs-xs);
+  font-size: var(--fs-sm);
   border-radius: 999px;
   color: var(--violet-light);
   background: rgba(255, 255, 255, 0.12);
