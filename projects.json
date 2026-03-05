@@ -125,6 +125,31 @@
     ]
   },
   {
+    "category": "dev",
+    "title": "Aid'tudiants",
+    "excerpt": "Refonte de la strategie de communication d'une association : charte graphique, direction artistique et site WordPress realise en binome.",
+    "image": "image/aidtudiants.png",
+    "imageAlt": "Logo du projet Aid'tudiants",
+    "detailsUrl": "projects/aidtudiants.html",
+    "mediaClass": "logo-media",
+    "tags": ["WordPress", "Strategie", "Branding", "DA"],
+    "actions": [
+      {
+        "label": "Voir details",
+        "url": "projects/aidtudiants.html",
+        "icon": "ri-file-list-line",
+        "style": "ghost"
+      },
+      {
+        "label": "Site",
+        "url": "http://aidtudiants.fiol.projetsmmichamps.fr/",
+        "icon": "ri-external-link-line",
+        "style": "primary",
+        "external": true
+      }
+    ]
+  },
+  {
     "category": "creative",
     "title": "De l'ombre à la lumière",
     "excerpt": "Court métrage jouant sur les contrastes lumière/ombre, avec tournage, montage et post-production complets.",
@@ -192,6 +217,53 @@
         "url": "pdf/analyse-filmique-avatar.pdf",
         "icon": "ri-external-link-line",
         "style": "primary"
+      }
+    ]
+  },
+  {
+    "category": "creative",
+    "title": "Vlog GP explorer",
+    "excerpt":"Vlog d'un week-end au Grand Prix Explorer, organiser par Squeezie",
+    "image": "https://img.youtube.com/vi/9n2l8sXo5jM/hqdefault.jpg",
+    "imageAlt": "Vignette du projet Vlog GP explorer",
+    "detailsUrl": "projects/vlog-gp-explorer.html",
+    "tags": ["Vlog", "Premiere Pro", "BandLab"],
+    "actions": [
+      {
+        "label": "Voir détails",
+        "url": "projects/vlog-gp-explorer.html",
+        "icon": "ri-file-list-line",
+        "style": "ghost"
+      },
+      {
+        "label": "Vidéo",
+        "url": "https://youtu.be/9n2l8sXo5jM",
+        "icon": "ri-external-link-line",
+        "style": "primary",
+        "external": true
+      }
+    ]
+  },
+  {
+    "category": "creative",
+    "title": "Campagne institutionnelle",
+    "excerpt": "Conception d'une campagne de communication institutionnelle : positionnement, message, direction artistique et declinaisons multi-supports.",
+    "image": "https://placehold.co/960x540/3b1150/ffffff?text=Campagne+institutionnelle",
+    "imageAlt": "Aperçu du projet Campagne institutionnelle",
+    "detailsUrl": "projects/campagne-institutionelle.html",
+    "tags": ["Communication", "Strategie", "Direction artistique", "Identite visuelle"],
+    "actions": [
+      {
+        "label": "Voir détails",
+        "url": "projects/campagne-institutionelle.html",
+        "icon": "ri-file-list-line",
+        "style": "primary"
+      },
+      {
+        "label": "PDF",
+        "url": "pdf/dossier_fete_du_fromage.pdf",
+        "icon": "ri-file-pdf-2-line",
+        "style": "ghost"
       }
     ]
   }

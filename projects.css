@@ -93,6 +93,15 @@
   object-fit: cover;
   display: block;
 }
+.project-cover.logo-cover {
+  aspect-ratio: 16 / 9;
+  background: rgba(11, 6, 24, 0.4);
+}
+.project-cover.logo-cover img {
+  object-fit: contain;
+  object-position: center;
+  padding: 16px;
+}
 
 .project-meta {
   margin-bottom: 60px;
