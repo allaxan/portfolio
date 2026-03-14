@@ -1,73 +1,13 @@
 [
   {
     "category": "dev",
-    "title": "Dans mon monde musical",
-    "excerpt": "Mini-site vitrine autour de mes goûts musicaux, avec mise en page responsive, cartes illustrées et navigation accessible.",
-    "image": "image/monde.png",
-    "imageAlt": "Logo du projet Dans mon monde musical",
-    "detailsUrl": "projects/monde_musical.html",
-    "tags": ["HTML", "CSS", "JavaScript"],
-    "actions": [
-      {
-        "label": "Voir détails",
-        "url": "projects/monde_musical.html",
-        "icon": "ri-file-list-line",
-        "style": "ghost"
-      },
-      {
-        "label": "Code",
-        "url": "https://github.com/allaxan/mon-monde-musical",
-        "icon": "ri-code-box-line",
-        "style": "ghost",
-        "external": true
-      },
-      {
-        "label": "Démo",
-        "url": "https://allaxan.github.io/mon-monde-musical/",
-        "icon": "ri-external-link-line",
-        "style": "primary",
-        "external": true
-      }
-    ]
-  },
-  {
-    "category": "dev",
-    "title": "Staytistics",
-    "excerpt": "Statistiques sur l'évolution des auditeurs du groupe Stray Kids via des graphiques interactifs basés sur des données JSON et l'API Deezer.",
-    "image": "image/staytistics.png",
-    "imageAlt": "Logo du projet Staytistics",
-    "detailsUrl": "projects/staytistics.html",
-    "tags": ["HTML", "CSS", "JavaScript", "JSON", "API"],
-    "actions": [
-      {
-        "label": "Voir détails",
-        "url": "projects/staytistics.html",
-        "icon": "ri-file-list-line",
-        "style": "ghost"
-      },
-      {
-        "label": "Code",
-        "url": "https://github.com/MMI-projets/Staytistics",
-        "icon": "ri-code-box-line",
-        "style": "ghost",
-        "external": true
-      },
-      {
-        "label": "Démo",
-        "url": "https://mmi-projets.github.io/Staytistics/",
-        "icon": "ri-external-link-line",
-        "style": "primary",
-        "external": true
-      }
-    ]
-  },
-  {
-    "category": "dev",
     "title": "Au Hasard des Saveurs",
     "excerpt": "Plateforme de recettes personnalisées selon goûts, compétences et matériel, avec favoris, likes et recommandations évolutives.",
     "image": "image/au-hasard-des-saveurs.png",
     "imageAlt": "Aperçu du projet Au Hasard des Saveurs",
     "detailsUrl": "projects/auhasarddessaveurs.html",
+    "role": "Développement front-end et intégration des parcours utilisateurs en équipe projet.",
+    "impact": "Mise en place d'une expérience personnalisée plus fluide, avec des parcours de recherche et d'enregistrement simplifiés.",
     "tags": ["HTML", "CSS", "JavaScript", "PHP", "MySQL"],
     "actions": [
       {
@@ -99,6 +39,8 @@
     "image": "image/logo.png",
     "imageAlt": "Aperçu du projet AllWomenFootball (football féminin)",
     "detailsUrl": "projects/allwomenfootball.html",
+    "role": "Conception et développement des interfaces, structuration du contenu éditorial et intégration dynamique.",
+    "impact": "Une architecture d'information claire qui facilite l'accès aux actus, équipes et compétitions sur desktop et mobile.",
     "mediaClass": "awf-media",
     "tags": ["HTML", "CSS", "JavaScript", "PHP", "MySQL"],
     "actions": [
@@ -126,11 +68,79 @@
   },
   {
     "category": "dev",
+    "title": "Staytistics",
+    "excerpt": "Statistiques sur l'évolution des auditeurs du groupe Stray Kids via des graphiques interactifs basés sur des données JSON et l'API Deezer.",
+    "image": "image/staytistics.png",
+    "imageAlt": "Logo du projet Staytistics",
+    "detailsUrl": "projects/staytistics.html",
+    "role": "Développement front-end des visualisations et intégration des données JSON/API.",
+    "impact": "Création de graphiques interactifs permettant une lecture plus rapide et visuelle de l'évolution des données.",
+    "tags": ["HTML", "CSS", "JavaScript", "JSON", "API"],
+    "actions": [
+      {
+        "label": "Voir détails",
+        "url": "projects/staytistics.html",
+        "icon": "ri-file-list-line",
+        "style": "ghost"
+      },
+      {
+        "label": "Code",
+        "url": "https://github.com/MMI-projets/Staytistics",
+        "icon": "ri-code-box-line",
+        "style": "ghost",
+        "external": true
+      },
+      {
+        "label": "Démo",
+        "url": "https://mmi-projets.github.io/Staytistics/",
+        "icon": "ri-external-link-line",
+        "style": "primary",
+        "external": true
+      }
+    ]
+  },
+  {
+    "category": "dev",
+    "title": "Dans mon monde musical",
+    "excerpt": "Mini-site vitrine autour de mes goûts musicaux, avec mise en page responsive, cartes illustrées et navigation accessible.",
+    "image": "image/monde.png",
+    "imageAlt": "Logo du projet Dans mon monde musical",
+    "detailsUrl": "projects/monde_musical.html",
+    "role": "Conception UI et intégration front-end responsive.",
+    "impact": "Renforcement de la lisibilité sur mobile et structuration plus claire des contenus éditoriaux.",
+    "tags": ["HTML", "CSS", "JavaScript"],
+    "actions": [
+      {
+        "label": "Voir détails",
+        "url": "projects/monde_musical.html",
+        "icon": "ri-file-list-line",
+        "style": "ghost"
+      },
+      {
+        "label": "Code",
+        "url": "https://github.com/allaxan/mon-monde-musical",
+        "icon": "ri-code-box-line",
+        "style": "ghost",
+        "external": true
+      },
+      {
+        "label": "Démo",
+        "url": "https://allaxan.github.io/mon-monde-musical/",
+        "icon": "ri-external-link-line",
+        "style": "primary",
+        "external": true
+      }
+    ]
+  },
+  {
+    "category": "dev",
     "title": "Aid'tudiants",
     "excerpt": "Refonte de la strategie de communication d'une association : charte graphique, direction artistique et site WordPress realise en binome.",
     "image": "image/aidtudiants.png",
     "imageAlt": "Logo du projet Aid'tudiants",
     "detailsUrl": "projects/aidtudiants.html",
+    "role": "Travail en groupe sur la stratégie de communication, l'identité visuelle et l'intégration WordPress.",
+    "impact": "Refonte cohérente de la présence digitale de l'association et meilleure clarté des messages clés.",
     "mediaClass": "logo-media",
     "tags": ["WordPress", "Strategie", "Branding", "DA"],
     "actions": [

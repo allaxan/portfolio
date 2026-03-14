@@ -5,6 +5,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Portfolio Claire Fiol</title>
+  <meta name="description"
+    content="Portfolio de Claire Fiol, développeuse front-end junior. Projets web, compétences techniques, méthodologie, CV et contact pour opportunités de stage ou alternance." />
   <link rel="stylesheet" href="style.css" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -12,9 +14,7 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Glory:ital,wght@0,100..800;1,100..800&family=Space+Grotesk:wght@300..700&display=swap"
     rel="stylesheet" />
-  <!-- Remix Icon for lightweight outline logos (GitHub, LinkedIn) -->
   <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
-  <!-- Favicon -->
   <link rel="icon" href="image/logo_portfolio.png" type="image/png" />
 </head>
 
@@ -26,11 +26,11 @@
     </a>
     <nav>
       <a href="#propos">À propos</a>
-      <a href="#parcours">Parcours</a>
       <a href="#projet">Projets</a>
       <a href="#competences">Compétences</a>
-      <a href="#cv">CV</a>
       <a href="#contact">Contact</a>
+      <a href="cv/CV-Claire-fiol.pdf" class="nav-cta" download
+        aria-label="Télécharger le CV de Claire Fiol en PDF">Télécharger CV</a>
     </nav>
   </header>
 
@@ -39,25 +39,34 @@
     <section id="accueil" class="accueil">
       <div class="accueil-content">
         <div class="accueil-text">
-          <div class="intro-badge" aria-label="Hello moi c'est Claire Fiol, Développeuse Front-End en devenir">
-            <span>Hello moi c'est,</span>
+          <div class="intro-badge" aria-label="Hello moi c'est Claire Fiol, développeuse front-end junior">
+            <span>Hello, moi c'est</span>
             <strong>Claire</strong>
           </div>
-          <h1>Développeuse <span class="highlight">Front-End</span> en devenir</h1>
+          <h1>Développeuse <span class="highlight">Front-End Junior</span></h1>
           <p class="accueil-description">
-            Passionnée par le développement web et la création d'expériences utilisateur innovantes.
-            Je transforme des idées en interfaces modernes et accessibles.
+            Étudiante en BUT MMI, je conçois des interfaces web modernes, accessibles et responsive.
+            J'aime transformer un besoin métier en expérience claire, performante et agréable à utiliser.
+          </p>
+          <p class="availability-pill">
+            <i class="ri-calendar-check-line" aria-hidden="true"></i>
+            Disponible pour stage à partir d'avril 2026 et alternance (à partir de septembre 2026)
           </p>
           <div class="accueil-actions">
             <a href="#projet" class="accueil-link primary">
               <i class="ri-folder-3-line"></i>
               Voir mes projets
             </a>
-            <a href="#contact" class="accueil-link secondary">
-              <i class="ri-mail-line"></i>
-              Me contacter
+            <a href="cv/CV-Claire-fiol.pdf" class="accueil-link secondary" download>
+              <i class="ri-download-2-line"></i>
+              Télécharger mon CV
             </a>
           </div>
+          <ul class="accueil-highlights" role="list" aria-label="Points clés du profil de Claire Fiol">
+            <li><strong>8+ projets</strong> web et créatifs livrés en équipe</li>
+            <li><strong>Focus qualité</strong> accessibilité, responsive, UI cohérente</li>
+            <li><strong>Stack actuelle</strong> HTML, CSS, JavaScript, PHP, MySQL, React</li>
+          </ul>
           <div class="reseau">
             <a class="icon" href="https://github.com/allaxan" target="_blank" rel="noopener" aria-label="GitHub">
               <i class="ri-github-line" aria-hidden="true"></i>
@@ -70,7 +79,8 @@
         </div>
         <div class="accueil-visual">
           <div class="profile-container">
-            <img src="image/moi.png" alt="Photo de profil de Claire Fiol" class="profile-photo" loading="lazy" decoding="async" />
+            <img src="image/moi.png" alt="Photo de profil de Claire Fiol" class="profile-photo" loading="lazy"
+              decoding="async" />
             <div class="profile-decoration decoration-1"></div>
             <div class="profile-decoration decoration-2"></div>
             <div class="profile-decoration decoration-3"></div>
@@ -82,24 +92,83 @@
       </a>
     </section>
 
+    <!-- 🎯 Profil recruteur -->
+    <section id="profil" class="profile-focus">
+      <div class="profile-focus-intro">
+        <span class="section-tag">Profil recruteur</span>
+        <h2>Ce que je peux apporter à votre équipe</h2>
+        <p>
+          Avec un profil junior engagé, curieux et très impliqué dans ce que je développe.
+          J'aime créer des interfaces utiles, soignées et agréables à utiliser, en restant à l'écoute des besoins réels.
+        </p>
+      </div>
+      <div class="profile-focus-grid" role="list">
+        <article class="focus-card" role="listitem">
+          <h3>Conception orientée utilisateur</h3>
+          <p>
+            J'accorde beaucoup d'importance à la clarté: je conçois des interfaces lisibles, accessibles et fluides,
+            aussi bien sur mobile que sur desktop.
+          </p>
+        </article>
+        <article class="focus-card" role="listitem">
+          <h3>Méthode projet</h3>
+          <p>
+            Dans mes projets, je m'organise avec méthode: priorisation, versioning Git/GitHub et livrables propres,
+            pour avancer efficacement en équipe.
+          </p>
+        </article>
+        <article class="focus-card" role="listitem">
+          <h3>Culture d'amélioration continue</h3>
+          <p>
+            Je progresse en continu: j'apprends constamment de nouvelles choses, je teste de nouveaux outils et je prépare Opquast pour
+            consolider mes bonnes pratiques web.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- 🎯 Objectif pro -->
+    <section id="objectif" class="career-target">
+      <div class="career-target-intro">
+        <span class="section-tag">Objectif 2026</span>
+        <h2>Ce que je recherche</h2>
+        <p>
+          Mon objectif est de rejoindre une équipe où je peux apporter une vraie valeur dès le début,
+          tout en continuant à progresser au contact de profils expérimentés.
+        </p>
+      </div>
+      <div class="career-target-grid" role="list">
+        <article class="target-card" role="listitem">
+          <h3>Type de mission</h3>
+          <p>Je recherche un stage à partir du 7 avril 2026 en développement front-end ou webdesign.</p>
+          <p>Je suis également ouverte à une alternance en front-end, intégration web ou UI développement.</p>
+        </article>
+        <article class="target-card" role="listitem">
+          <h3>Disponibilité</h3>
+          <p>Disponible dès septembre 2026 pour une alternance, avec l'envie de m'investir durablement sur des projets
+            concrets.</p>
+        </article>
+        <article class="target-card" role="listitem">
+          <h3>Environnement souhaité</h3>
+          <p>Je cherche un environnement collaboratif, exigeant sur la qualité web, avec du partage technique et une
+            vraie culture produit.</p>
+        </article>
+      </div>
+    </section>
+
     <!-- 👤 À propos -->
     <section id="propos" class="about">
       <h2>À propos de moi</h2>
       <p>
-        Étudiante en développement web, je m’intéresse à ce domaine depuis
-        plusieurs années. Cela fait aujourd’hui un an et demi que j’apprends
-        et que je développe mes compétences, guidée par une vraie curiosité et
-        l’envie de progresser continuellement.
-      </p>
-      <p>
-        Mon objectif est de devenir une développeuse front-end compétente et
-        de contribuer à des projets innovants tout au long de ma future
-        carrière.
+        Étudiante en développement web avec une forte appétence pour le front-end.
+        Depuis un an et demi, je développe mes compétences à travers des projets concrets,
+        en combinant technique, design d'interface et sens du détail.
       </p>
       <div class="card-grid">
         <article class="card">
           <figure class="card-media">
-            <img src="image/chaseatlantic.png" alt="Concert du groupe Chase Atlantic à Paris" loading="lazy" decoding="async" />
+            <img src="image/chaseatlantic.png" alt="Concert du groupe Chase Atlantic à Paris" loading="lazy"
+              decoding="async" />
           </figure>
           <div class="card-body">
             <h3 class="card-title">La musique</h3>
@@ -114,8 +183,8 @@
 
         <article class="card">
           <figure class="card-media">
-            <img src="image/equipe_de_france.jpg"
-              alt="Image d'avant match de l'équipe de France féminine de football" loading="lazy" decoding="async" />
+            <img src="image/equipe_de_france.jpg" alt="Image d'avant match de l'équipe de France féminine de football"
+              loading="lazy" decoding="async" />
           </figure>
           <div class="card-body">
             <h3 class="card-title">
@@ -131,7 +200,8 @@
 
         <article class="card">
           <figure class="card-media">
-            <img src="image/the_last_of_us.jpg" alt="Couverture du jeu vidéo The Last of Us Part I et II" loading="lazy" decoding="async" />
+            <img src="image/the_last_of_us.jpg" alt="Couverture du jeu vidéo The Last of Us Part I et II" loading="lazy"
+              decoding="async" />
           </figure>
           <div class="card-body">
             <h3 class="card-title">Les jeux vidéo</h3>
@@ -333,7 +403,8 @@
         <div class="skills-grid" role="list">
           <article class="skill-card html" data-level="5" aria-label="HTML niveau 5 sur 5">
             <div class="skill-icon" aria-hidden="true">
-              <i class="ri-code-s-slash-line"></i>
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="Logo HTML5"
+                loading="lazy" decoding="async" />
             </div>
             <h3 class="skill-title">HTML</h3>
             <p class="skill-cat">Web</p>
@@ -345,7 +416,8 @@
 
           <article class="skill-card css" data-level="5" aria-label="CSS niveau 5 sur 5">
             <div class="skill-icon" aria-hidden="true">
-              <i class="ri-braces-line"></i>
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="Logo CSS3"
+                loading="lazy" decoding="async" />
             </div>
             <h3 class="skill-title">CSS</h3>
             <p class="skill-cat">Web</p>
@@ -357,7 +429,8 @@
 
           <article class="skill-card js" data-level="4" aria-label="JavaScript niveau 4 sur 5">
             <div class="skill-icon" aria-hidden="true">
-              <i class="ri-cpu-line"></i>
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                alt="Logo JavaScript" loading="lazy" decoding="async" />
             </div>
             <h3 class="skill-title">JavaScript</h3>
             <p class="skill-cat">Langage</p>
@@ -369,7 +442,8 @@
 
           <article class="skill-card git" data-level="3" aria-label="Git niveau 3 sur 5">
             <div class="skill-icon" aria-hidden="true">
-              <i class="ri-git-branch-line"></i>
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Logo Git"
+                loading="lazy" decoding="async" />
             </div>
             <h3 class="skill-title">Git</h3>
             <p class="skill-cat">Version Control</p>
@@ -381,7 +455,8 @@
 
           <article class="skill-card github" data-level="5" aria-label="GitHub niveau 5 sur 5">
             <div class="skill-icon" aria-hidden="true">
-              <i class="ri-github-line"></i>
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="Logo GitHub"
+                loading="lazy" decoding="async" />
             </div>
             <h3 class="skill-title">GitHub</h3>
             <p class="skill-cat">Collaboration</p>
@@ -393,7 +468,8 @@
 
           <article class="skill-card php" data-level="3" aria-label="PHP niveau 3 sur 5">
             <div class="skill-icon" aria-hidden="true">
-              <i class="ri-code-box-line"></i>
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="Logo PHP"
+                loading="lazy" decoding="async" />
             </div>
             <h3 class="skill-title">PHP</h3>
             <p class="skill-cat">Backend</p>
@@ -405,7 +481,8 @@
 
           <article class="skill-card sql" data-level="5" aria-label="SQL niveau 5 sur 5">
             <div class="skill-icon" aria-hidden="true">
-              <i class="ri-database-2-line"></i>
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="Logo MySQL"
+                loading="lazy" decoding="async" />
             </div>
             <h3 class="skill-title">SQL</h3>
             <p class="skill-cat">Base de données</p>
@@ -417,7 +494,8 @@
 
           <article class="skill-card figma" data-level="4" aria-label="Figma niveau 4 sur 5">
             <div class="skill-icon" aria-hidden="true">
-              <i class="ri-figma-line"></i>
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="Logo Figma"
+                loading="lazy" decoding="async" />
             </div>
             <h3 class="skill-title">Figma</h3>
             <p class="skill-cat">Design</p>
@@ -440,7 +518,8 @@
           </article>
           <article class="skill-card responsive" data-level="2" aria-label="Three.js niveau 2 sur 5">
             <div class="skill-icon" aria-hidden="true">
-              <i class="ri-cube-3-line"></i>
+              <img src="https://cdn.simpleicons.org/threedotjs/FFFFFF" alt="Logo Three.js" loading="lazy"
+                decoding="async" />
             </div>
             <h3 class="skill-title">Three.js</h3>
             <p class="skill-cat">3D</p>
@@ -449,7 +528,43 @@
                 class="dot"></span>
             </div>
           </article>
+
+          <article class="skill-card react" data-level="2" aria-label="React.js niveau 2 sur 5">
+            <div class="skill-icon" aria-hidden="true">
+              <i class="ri-reactjs-line"></i>
+            </div>
+            <h3 class="skill-title">React.js</h3>
+            <p class="skill-cat">Développement</p>
+            <div class="skill-dots" aria-hidden="true">
+              <span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span
+                class="dot"></span>
+            </div>
+          </article>
+
+          <article class="skill-card node" data-level="1" aria-label="Node.js niveau 1 sur 5">
+            <div class="skill-icon" aria-hidden="true">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
+                alt="Logo Node.js" loading="lazy" decoding="async" />
+            </div>
+            <h3 class="skill-title">Node.js</h3>
+            <p class="skill-cat">Développement</p>
+            <div class="skill-dots" aria-hidden="true">
+              <span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span
+                class="dot"></span>
+            </div>
+          </article>
         </div>
+      </div>
+
+      <div class="work-method">
+        <h3>Ma méthode de travail</h3>
+        <ul class="method-list" role="list">
+          <li><strong>Comprendre le besoin:</strong> je reformule les objectifs et les priorités avant de coder.</li>
+          <li><strong>Construire proprement:</strong> composants lisibles, responsive, et cohérence UI.</li>
+          <li><strong>Garantir la qualité:</strong> vérifications accessibilité, tests manuels et revues Git/GitHub.
+          </li>
+          <li><strong>Livrer clairement:</strong> code structuré, commits explicites.</li>
+        </ul>
       </div>
 
       <!-- À venir / En cours -->
@@ -472,22 +587,9 @@
           </article>
 
 
-          <article class="future-card">
-            <div class="skill-icon" aria-hidden="true">
-              <i class="ri-reactjs-line"></i>
-            </div>
-            <h4 class="future-title">React.js</h4>
-            <p class="future-note">En cours d'apprentissage</p>
-          </article>
+          
 
-          <article class="future-card">
-            <div class="skill-icon" aria-hidden="true">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
-                alt="Logo Node.js" loading="lazy" decoding="async" />
-            </div>
-            <h4 class="future-title">Node.js</h4>
-            <p class="future-note">En cours d'apprentissage</p>
-          </article>
+          
         </div>
       </div>
     </section>
@@ -495,7 +597,7 @@
     <!-- 📝 CV -->
     <section id="cv" class="cv">
       <h2>Mon CV</h2>
-      <p>Téléchargez mon CV en PDF :</p>
+      <p>Téléchargez mon CV pour accéder à mon parcours, mes compétences et mes projets clés.</p>
       <div class="cv-actions">
         <a class="btn btn-primary" href="cv/CV-Claire-fiol.pdf" download
           aria-label="Télécharger mon CV en français (PDF)"><i class="ri-download-2-line" aria-hidden="true"></i> CV
@@ -507,7 +609,13 @@
     <!-- 📞 Contact -->
     <section id="contact" class="contact">
       <h2>Contactez-moi</h2>
-      <p>Vous pouvez me contacter par email.</p>
+      <p>Disponible pour échanger sur une opportunité de stage, alternance ou collaboration.</p>
+      <p class="contact-cta-main">
+        <a class="btn btn-primary" href="mailto:claire.fiol@sfr.fr?subject=Entretien%20-%20Portfolio%20Claire%20Fiol"
+          aria-label="Me contacter pour un entretien par email"><i class="ri-calendar-check-line"
+            aria-hidden="true"></i>
+          Me contacter pour un entretien</a>
+      </p>
       <div class="social-media">
         <a class="btn btn-primary" href="mailto:claire.fiol@sfr.fr" aria-label="Envoyer un email à Claire Fiol"><i
             class="ri-mail-line" aria-hidden="true"></i> Email</a>
@@ -520,7 +628,7 @@
 
   <!-- 🔚 Footer -->
   <footer class="site-footer">
-    <p>&copy; 2025 — Mon Portfolio</p>
+    <p>&copy; 2026 — Claire Fiol. Portfolio professionnel.</p>
   </footer>
 
   <script>
@@ -596,6 +704,23 @@
       excerpt.className = "work-excerpt";
       excerpt.textContent = project.excerpt;
 
+      const insights = document.createElement("div");
+      insights.className = "work-insights";
+
+      if (project.role) {
+        const role = document.createElement("p");
+        role.className = "work-role";
+        role.innerHTML = `<strong>Role:</strong> ${project.role}`;
+        insights.appendChild(role);
+      }
+
+      if (project.impact) {
+        const impact = document.createElement("p");
+        impact.className = "work-impact";
+        impact.innerHTML = `<strong>Impact:</strong> ${project.impact}`;
+        insights.appendChild(impact);
+      }
+
       const tags = document.createElement("div");
       tags.className = "tags";
       project.tags.forEach((tag) => tags.appendChild(createTag(tag)));
@@ -604,7 +729,11 @@
       actions.className = "work-actions";
       project.actions.forEach((action) => actions.appendChild(createAction(action)));
 
-      body.append(title, excerpt, tags, actions);
+      if (insights.childElementCount > 0) {
+        body.append(title, excerpt, insights, tags, actions);
+      } else {
+        body.append(title, excerpt, tags, actions);
+      }
       article.append(figure, body);
       return article;
     };
