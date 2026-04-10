@@ -276,5 +276,31 @@
         "style": "ghost"
       }
     ]
+  },
+  {
+    "category": "dev",
+    "title": "SIA — Entre Deux Rives",
+    "excerpt": "Exposition immersive critiquant la perception occidentale des mythes en bande dessinée. Une stratégie de communication hybride mêlant analyses critiques, expérience VR et engagement social.",
+    "image": "image/logo-sia.png",
+    "imageAlt": "Logo de l'exposition Entre Deux Rives",
+    "detailsUrl": "projects/sia-entre-deux-rives.html",
+    "role": "Developer Front-End & Game Designer. Contribution à la stratégie de communication et à la conception de l'expérience immersive VR.",
+    "impact": "Développement des interfaces web de l'exposition, conception des parcours d'enquête interactifs et intégration des dispositifs immersifs. Une exposition pédagogique qui déconstruit les clichés orientalistes dans la BD franco-belge classique, destinée à un public transgénérationnel.",
+    "tags": ["Front-End", "Game Design", "Immersion VR", "Communication", "UX Design", "Stratégie"],
+    "actions": [
+      {
+        "label": "Voir détails",
+        "url": "projects/sia-entre-deux-rives.html",
+        "icon": "ri-file-list-line",
+        "style": "primary"
+      },
+      {
+        "label": "Site expo",
+        "url": "https://sia-exposition.fr/",
+        "icon": "ri-external-link-line",
+        "style": "ghost",
+        "external": true
+      }
+    ]
   }
 ]

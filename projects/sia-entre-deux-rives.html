@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SIA - Entre Deux Rives — Exposition Immersive & Critique</title>
+    <meta name="description"
+        content="Exposition immersive critiquant la perception occidentale des mythes en bande dessinée. Exploration des clichés dans Tintin et Blake & Mortimer à travers une expérience VR et scientifique." />
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="../projects.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Glory:ital,wght@0,100..800;1,100..800&family=Space+Grotesk:wght@300..700&display=swap"
+        rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="icon" href="../image/logo_portfolio.png" type="image/png" />
+    <style>
+        .testimonial-section {
+            margin-top: 48px;
+            padding: 32px;
+            background: linear-gradient(135deg, rgba(79, 195, 255, 0.1), rgba(159, 124, 255, 0.08));
+            border-radius: 20px;
+            border: 1px solid rgba(159, 124, 255, 0.2);
+        }
+
+        .personas-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+            margin-top: 24px;
+        }
+
+        .persona-card {
+            background: linear-gradient(135deg, rgba(255, 111, 145, 0.1), rgba(79, 195, 255, 0.08));
+            border: 1px solid rgba(159, 124, 255, 0.2);
+            border-radius: 16px;
+            padding: 24px;
+        }
+
+        .persona-card h4 {
+            color: #cfd9ff;
+            font-size: var(--fs-md);
+            margin: 0 0 12px 0;
+        }
+
+        .persona-info {
+            font-size: var(--fs-sm);
+            color: var(--text-muted);
+            margin-bottom: 16px;
+        }
+
+        .persona-info strong {
+            color: #fff;
+        }
+
+        .strategy-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 24px;
+        }
+
+        .strategy-card {
+            background: var(--glass);
+            border: 1px solid var(--glass-border);
+            border-radius: 12px;
+            padding: 20px;
+        }
+
+        .strategy-card h4 {
+            color: #cfd9ff;
+            font-size: var(--fs-md);
+            margin: 0 0 10px 0;
+        }
+
+        .strategy-card p {
+            margin: 0;
+            color: var(--text-muted);
+            font-size: var(--fs-sm);
+        }
+
+        .timeline-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            font-size: var(--fs-sm);
+        }
+
+        .timeline-table th {
+            background: rgba(159, 124, 255, 0.15);
+            color: #cfd9ff;
+            padding: 12px;
+            text-align: left;
+            border: 1px solid rgba(159, 124, 255, 0.2);
+        }
+
+        .timeline-table td {
+            padding: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            color: var(--text-muted);
+        }
+
+        .timeline-table tr:hover {
+            background: rgba(159, 124, 255, 0.08);
+        }
+
+        .key-message {
+            background: linear-gradient(135deg, rgba(159, 124, 255, 0.15), rgba(79, 195, 255, 0.08));
+            border-left: 4px solid #9f7cff;
+            padding: 20px;
+            margin: 24px 0;
+            border-radius: 8px;
+            font-style: italic;
+            color: #cfd9ff;
+            font-size: var(--fs-md);
+        }
+
+        .pillars-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 20px;
+            margin-top: 24px;
+        }
+
+        .pillar-card {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.08), rgba(159, 124, 255, 0.05));
+            border: 1px solid rgba(159, 124, 255, 0.2);
+            border-radius: 12px;
+            padding: 20px;
+        }
+
+        .pillar-card .pillar-icon {
+            font-size: 2rem;
+            margin-bottom: 12px;
+        }
+
+        .pillar-card h4 {
+            color: #cfd9ff;
+            font-size: var(--fs-md);
+            margin: 0 0 8px 0;
+        }
+
+        .pillar-card p {
+            margin: 0;
+            font-size: var(--fs-sm);
+            color: var(--text-muted);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header class="header">
+        <a href="../index.html" class="logo-home" aria-label="Retour à l'accueil">
+            <img src="../image/logo_portfolio.png" alt="Logo Claire Fiol" class="logo-img" loading="lazy"
+                decoding="async" />
+        </a>
+        <nav>
+            <a href="../index.html#propos">À propos</a>
+            <a href="../index.html#projet">Projets</a>
+            <a href="../index.html#competences">Compétences</a>
+            <a href="../index.html#contact">Contact</a>
+            <a href="../cv/CV-Claire-fiol.pdf" class="nav-cta" download aria-label="Télécharger le CV">Télécharger CV</a>
+        </nav>
+    </header>
+
+    <main class="project-detail">
+
+        <!-- HERO -->
+        <section class="project-hero">
+            <div class="project-hero-content">
+                <div class="project-hero-text">
+                    <div class="project-badge">Communication & Design</div>
+                    <h1>SIA — Entre Deux Rives</h1>
+                    <p class="lead">
+                        Exposition immersive critiquant la perception occidentale des mythes et légendes en bande
+                        dessinée. Une expérience hybride mêlant analyse critique, réalité virtuelle et découverte
+                        scientifique, destinée à questionner nos regards sur les cultures.
+                    </p>
+                    <div class="tags">
+                        <span class="tag">Stratégie de Communication</span>
+                        <span class="tag">Immersion VR</span>
+                        <span class="tag">Design Critique</span>
+                        <span class="tag">Engagement Social</span>
+                        <span class="tag">Archéologie</span>
+                        <span class="tag">BD Graphique</span>
+                    </div>
+                    <div class="project-actions">
+                        <a class="accueil-link primary" href="../index.html#projet"><i class="ri-arrow-left-line"></i>Retour
+                            aux projets</a>
+                    </div>
+                </div>
+                <figure class="project-cover">
+                    <img src="../image/logo-sia.png" alt="Logo de l'exposition Entre Deux Rives" class="project-image"
+                        loading="lazy" decoding="async" />
+                </figure>
+            </div>
+        </section>
+
+        <!-- CONCEPT CENTRAL -->
+        <section class="project-summary">
+            <h2>Le Concept</h2>
+
+            <div class="key-message">
+                <strong>« Les mythes façonnent le monde. Mais qui façonne les mythes ? »</strong>
+            </div>
+
+            <p>
+                L'exposition "<strong>Entre Deux Rives</strong>" propose une relecture analytique des classiques de la
+                bande dessinée franco-belge (<em>Les Cigares du Pharaon</em> de Tintin, <em>Le Mystère de la Grande
+                    Pyramide</em> de Blake & Mortimer) en confrontant l'imaginaire des auteurs aux réalités
+                culturelles, archéologiques et historiques.
+            </p>
+
+            <h3>Enjeux Centraux</h3>
+            <p>
+                Cette exposition aborde trois piliers fondamentaux :
+            </p>
+
+            <div class="pillars-grid">
+                <div class="pillar-card">
+                    <div class="pillar-icon">📚</div>
+                    <h4>Critique Culturelle</h4>
+                    <p>Déconstruire les clichés et le regard occidental sur l'Égypte et les cultures non-occidentales
+                        présents dans les BD classiques.</p>
+                </div>
+                <div class="pillar-card">
+                    <div class="pillar-icon">🔬</div>
+                    <h4>Rigueur Scientifique</h4>
+                    <p>Confronter la fiction aux faits archéologiques et historiques, en collaboration avec des
+                        égyptologues et experts.</p>
+                </div>
+                <div class="pillar-card">
+                    <div class="pillar-icon">🥽</div>
+                    <h4>Immersion Technologique</h4>
+                    <p>Utiliser la VR et les dispositifs numériques pour offrir une expérience sensorielle qui transcende
+                        la lecture traditionnelle.</p>
+                </div>
+            </div>
+
+            <h3>Approche Hybride</h3>
+            <p>
+                Le parcours mêle <strong>supports physiques</strong> (planches originales, maquettes, documents
+                archéologiques) et <strong>dispositifs numériques</strong> (écrans interactifs, audio immersif, expérience
+                VR optionnelle). Cette dualité permet au visiteur de choisir son niveau d'engagement et de vivre
+                l'exposition à son rythme.
+            </p>
+        </section>
+
+        <!-- STRATÉGIE DE COMMUNICATION -->
+        <section class="project-summary">
+            <h2>Ma Contribution au Projet</h2>
+
+            <h3>🎮 En tant que Developer Front-End & Game Designer</h3>
+            <ul>
+                <li><strong>Développement des interfaces web</strong> : Création de la plateforme numérique de l'exposition avec HTML5, CSS3, JavaScript pour une expérience fluide et accessible.</li>
+                <li><strong>Design des parcours d'enquête</strong> : Conception gamifiée du parcours visiteur avec méchaniques d'interaction (collecte de preuves, déverrouillage de contenu, progression narrative).</li>
+                <li><strong>Intégration VR et immersion</strong> : Développement des interfaces de sélection et de contrôle pour l'expérience VR optionnelle en réalité virtuelle.</li>
+                <li><strong>UX/UI Design</strong> : Architecture de l'information, wireframes, prototypes interactifs adaptés aux trois personas (18-35 ans, 60+, parents).</li>
+            </ul>
+
+            <h3>💬 Contribution à la Stratégie de Communication</h3>
+            <ul>
+                <li><strong>Cadrage du message central</strong> : Participation à la définition du positionnement critique et du tone de voix inspirant mais accessible.</li>
+                <li><strong>Définition des personas</strong> : Analyse des cibles (Jordan, Jean-Pierre, Thomas) et adaptation de l'expérience numérique à leurs besoins spécifiques.</li>
+                <li><strong>Conseil en immersion technologique</strong> : Valider la faisabilité technique des dispositifs VR/AR et leur pertinence pédagogique dans le parcours d'exposition.</li>
+            </ul>
+
+            <hr style="margin: 32px 0; opacity: 0.2;">
+
+            <h2>Stratégie de Communication</h2>
+
+            <h3>Problématique</h3>
+            <div class="key-message">
+                Comment dépoussiérer l'image de la bande dessinée par le biais de la technologie et de la science, afin
+                de faire de cette exposition un rendez-vous culturel pour tous et non une simple galerie pour fans ?
+            </div>
+
+            <h3>Message Central & Ton</h3>
+            <ul>
+                <li><strong>Inspirant :</strong> L'exposition offre une opportunité de réflexion profonde.</li>
+                <li><strong>Culturel mais accessible :</strong> Complex ideas, langage vulgarisé pour tous.</li>
+                <li><strong>Engagé :</strong> Critique sans être moralisateur, bienveillant et inclusif.</li>
+            </ul>
+
+            <h3>Les 3 Axes de Persuasion</h3>
+            <div class="strategy-grid">
+                <div class="strategy-card">
+                    <h4>Rationnel</h4>
+                    <p>Appuyé sur des faits : nombre d'albums étudiés, sources archéologiques confrontées, expertise
+                        d'égyptologues et d'historiens reconnus. La technologie VR est justifiée par des précisions
+                        techniques.</p>
+                </div>
+                <div class="strategy-card">
+                    <h4>Émotionnel</h4>
+                    <p>Storytelling de "découverte" et "exploration". Le visiteur devient acteur de sa propre aventure,
+                        immergé dans les univers de Tintin et Blake & Mortimer.</p>
+                </div>
+                <div class="strategy-card">
+                    <h4>Éthique</h4>
+                    <p>Transmission culturelle et éducation au regard critique. Respect de la dignité des patrimoines, sans
+                        caricature ni réduction au divertissement.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- PERSONAS & CIBLES -->
+        <section class="project-summary">
+            <h2>Cibles & Personas</h2>
+
+            <h3>Segmentation de la Cible</h3>
+            <p>
+                L'audience est <strong>transgénérationnelle par thématique, mais jeune par la forme</strong>. Voici les
+                trois personas prioritaires :
+            </p>
+
+            <div class="personas-grid">
+                <div class="persona-card">
+                    <h4>🎮 Jordan, le Curieux Connecté</h4>
+                    <div class="persona-info">
+                        <strong>Âge :</strong> 26 ans (18-35 ans)<br>
+                        <strong>Profil :</strong> Diplômé urbain, connecté, sensibilisé aux enjeux sociaux
+                    </div>
+                    <p><strong>Motivations :</strong></p>
+                    <ul style="margin: 8px 0; padding-left: 18px; color: var(--text-muted); font-size: var(--fs-sm);">
+                        <li>L'engagement social (racisme, inclusion) — 77% de soutien</li>
+                        <li>L'expérience technologique immersive (VR)</li>
+                        <li>La science vulgarisée et compréhensible</li>
+                    </ul>
+                </div>
+
+                <div class="persona-card">
+                    <h4>📚 Jean-Pierre, le Gardien du Patrimoine</h4>
+                    <div class="persona-info">
+                        <strong>Âge :</strong> 62 ans (60+)<br>
+                        <strong>Profil :</strong> Retraité, lecteur de Tintin dès l'enfance
+                    </div>
+                    <p><strong>Motivations :</strong></p>
+                    <ul style="margin: 8px 0; padding-left: 18px; color: var(--text-muted); font-size: var(--fs-sm);">
+                        <li>Nostalgie et savoir (valeur patrimoniale)</li>
+                        <li>Préférence pour les objets matériels (37% des Français)</li>
+                        <li>Transmission aux générations futures</li>
+                    </ul>
+                </div>
+
+                <div class="persona-card">
+                    <h4>👨‍👩‍👧‍👦 Thomas, le Parent Transmetteur</h4>
+                    <div class="persona-info">
+                        <strong>Âge :</strong> 41 ans (25-45 ans)<br>
+                        <strong>Profil :</strong> Père de deux enfants (8 et 12 ans)
+                    </div>
+                    <p><strong>Motivations :</strong></p>
+                    <ul style="margin: 8px 0; padding-left: 18px; color: var(--text-muted); font-size: var(--fs-sm);">
+                        <li>Ludo-éducatif (Égypte au programme scolaire)</li>
+                        <li>Immersion utile et apprentissage</li>
+                        <li>Déconstruction des préjugés</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- SUPPORTS & CALENDRIER -->
+        <section class="project-summary">
+            <h2>Supports de Communication & Calendrier</h2>
+
+            <h3>Supports Prioritaires</h3>
+            <ul>
+                <li><strong>Réseaux Sociaux :</strong> Stories quotidiennes, posts 3x/semaine sur Instagram & Facebook
+                    (contenu teaser, "Le saviez-vous ?", sondages)</li>
+                <li><strong>Vidéo :</strong> Teaser vidéo 30-45sec, vidéos YouTube/TikTok tous les 15 jours</li>
+                <li><strong>Site Web :</strong> Page dédiée à l'exposition (mise à jour mensuelle)</li>
+                <li><strong>Communication Papier :</strong> Flyers en lieux culturels, écoles, médiathèques</li>
+                <li><strong>Événement :</strong> Vernissage d'ouverture avec photos, live stories, goodies</li>
+            </ul>
+
+            <h3>Calendrier d'Actions</h3>
+            <div style="overflow-x: auto;">
+                <table class="timeline-table">
+                    <thead>
+                        <tr>
+                            <th>Période</th>
+                            <th>Action de Communication</th>
+                            <th>Responsable</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Février</td>
+                            <td>Lancement des flyers papier en lieux culturels & écoles</td>
+                            <td>Équipe Média</td>
+                        </tr>
+                        <tr>
+                            <td>Mars</td>
+                            <td>Lancement du teaser vidéo (Instagram, TikTok, Site)</td>
+                            <td>Équipe Créative</td>
+                        </tr>
+                        <tr>
+                            <td>7/7j</td>
+                            <td>Stories Instagram : teasing visuel, compte à rebours, "Le saviez-vous ?"</td>
+                            <td>Social Media Manager</td>
+                        </tr>
+                        <tr>
+                            <td>3/semaine</td>
+                            <td>Publications Instagram & Facebook (contenu éducatif & émotionnel)</td>
+                            <td>Community Manager</td>
+                        </tr>
+                        <tr>
+                            <td>2/mois</td>
+                            <td>Vidéos YouTube & TikTok (extraits, coulisses, témoignages)</td>
+                            <td>Équipe Vidéo</td>
+                        </tr>
+                        <tr>
+                            <td>Mensuel</td>
+                            <td>Mise à jour du site web & infolettre</td>
+                            <td>Web Manager</td>
+                        </tr>
+                        <tr>
+                            <td>18 avril 2026</td>
+                            <td>Vernissage d'ouverture + lancement vente de goodies</td>
+                            <td>Équipe Événementiel</td>
+                        </tr>
+                        <tr>
+                            <td>Fin expo</td>
+                            <td>Conférence finale avec experts</td>
+                            <td>Équipe Médiation</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- META -->
+        <section class="project-meta">
+            <div class="meta-grid">
+                <article class="meta-card">
+                    <h3>Rôle</h3>
+                    <p>Developer Front-End & Game Designer</p>
+                    <p style="margin-top: 8px; color: #b0e7ff; font-size: var(--fs-sm);">Contribution stratégie de communication & conception UX</p>
+                </article>
+                <article class="meta-card">
+                    <h3>Contexte</h3>
+                    <p>Projet collectif d'exposition — Avril 2026</p>
+                </article>
+                <article class="meta-card">
+                    <h3>Disciplines</h3>
+                    <div class="tags">
+                        <span class="tag">Front-End Development</span>
+                        <span class="tag">Game Design</span>
+                        <span class="tag">UX/UI Design</span>
+                        <span class="tag">Communication</span>
+                        <span class="tag">Immersion VR</span>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- OBJECTIFS PÉDAGOGIQUES -->
+        <section class="project-summary">
+            <h2>Objectifs de Communication Détaillés</h2>
+
+            <h3>Cognitifs (Informatifs)</h3>
+            <p>Comment informer et faire comprendre l'exposition ?</p>
+            <ul>
+                <li>Rédiger des textes clairs et synthétiques pour affiche, site et réseaux sociaux</li>
+                <li>Créer une série de posts explicatifs (ex : "Le saviez-vous ?") détaillant les enjeux</li>
+                <li>Réaliser des vidéos et carrousels présentant la critique de l'orientalisme</li>
+                <li>Intégrer des témoignages d'égyptologues et experts en BD</li>
+                <li>Proposer des supports pédagogiques (QR codes, panneaux explicatifs)</li>
+            </ul>
+
+            <h3>Affectifs (Émotionnels)</h3>
+            <p>Comment susciter une émotion et capter l'attention ?</p>
+            <ul>
+                <li>Concevoir une identité visuelle mystérieuse (typographies, palettes, ambiance)</li>
+                <li>Créer une campagne teaser (visuels énigmatiques, citations intrigantes)</li>
+                <li>Mettre en scène l'univers (codes du mythe, de l'exploration, de l'énigme)</li>
+                <li>Utiliser un storytelling immersif dans les publications</li>
+            </ul>
+
+            <h3>Comportementaux (Conatifs)</h3>
+            <p>Comment inciter le public à passer à l'action ?</p>
+            <ul>
+                <li>Mettre en place un compte à rebours sur réseaux sociaux</li>
+                <li>Ajouter des appels à l'action clairs ("Réservez votre place…")</li>
+                <li>Créer un hashtag dédié pour encourager le partage (#EntreDeuxRives)</li>
+                <li>Prévoir un espace "photo" immersif pour inciter aux stories</li>
+                <li>Relayer les contenus des visiteurs pour encourager l'engagement</li>
+            </ul>
+        </section>
+
+        <!-- GOODIES & EXPÉRIENCE -->
+        <section class="project-summary">
+            <h2>Univers Étendu & Goodies</h2>
+
+            <p>
+                Pour prolonger l'expérience et renforcer l'engagement, une ligne de goodies sera proposée au vernissage
+                et pendant la durée de l'exposition :
+            </p>
+
+            <ul>
+                <li><strong>Carnets de visite :</strong> Carnet d'enquête du visiteur (parcours interactif)</li>
+                <li><strong>Éditions limitées :</strong> Extraits des BD critiquées, avec analyses parallèles</li>
+                <li><strong>Accessoires :</strong> Bracelets, porte-clés, stickers inspirés de la BD et de l'Égypte antique
+                </li>
+                <li><strong>Contenus numériques :</strong> Dossier pédagogique à télécharger (gratuit)</li>
+            </ul>
+        </section>
+
+        <!-- LIENS -->
+        <section class="project-links">
+            <div class="links-row">
+                <a class="accueil-link primary" href="https://sia-exposition.fr/" target="_blank" rel="noopener">
+                    <i class="ri-external-link-line"></i>Voir le site
+                </a>
+                <a class="accueil-link secondary" href="../index.html#projet"><i class="ri-arrow-left-line"></i>Retour
+                    aux projets</a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <p>&copy; 2026 — Claire Fiol. Portfolio professionnel.</p>
+    </footer>
+</body>
+
+</html>
