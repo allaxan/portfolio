@@ -6,15 +6,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Portfolio Claire Fiol</title>
   <meta name="description"
-    content="Portfolio de Claire Fiol, développeuse front-end junior. Projets web, compétences techniques, méthodologie, CV et contact pour opportunités de stage ou alternance." />
+    content="Portfolio immersif de Claire Fiol. Développeuse front-end junior créant des expériences digitales émotionnelles et modernes." />
   <link rel="stylesheet" href="style.css" />
 
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=Glory:ital,wght@0,100..800;1,100..800&family=Space+Grotesk:wght@300..700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700;800&display=swap"
     rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+  
+  <!-- Icon -->
   <link rel="icon" href="image/logo_portfolio.png" type="image/png" />
 </head>
 
@@ -28,6 +31,7 @@
       <a href="#propos">À propos</a>
       <a href="#projet">Projets</a>
       <a href="#competences">Compétences</a>
+      <a href="#now-playing">En Écoute</a>
       <a href="#contact">Contact</a>
       <a href="cv/CV-Claire-fiol.pdf" class="nav-cta" download
         aria-label="Télécharger le CV de Claire Fiol en PDF">Télécharger CV</a>
@@ -95,7 +99,6 @@
     <!-- 🎯 Profil recruteur -->
     <section id="profil" class="profile-focus">
       <div class="profile-focus-intro">
-        <span class="section-tag"></span>
         <h2>Ce que je peux apporter à votre équipe</h2>
         <p>
           Avec un profil junior engagé, curieux et très impliqué dans ce que je développe.
@@ -130,7 +133,6 @@
     <!-- 🎯 Objectif pro -->
     <section id="objectif" class="career-target">
       <div class="career-target-intro">
-        <span class="section-tag">Objectif 2026</span>
         <h2>Ce que je recherche</h2>
         <p>
           Mon objectif est de rejoindre une équipe où je peux apporter une vraie valeur dès le début,
@@ -307,7 +309,6 @@
     <!-- 💼 Projets -->
     <section id="projet" class="projects projects-toggle">
       <div class="projects-intro">
-        <span class="section-tag">Projets</span>
         <h2>Mes projets</h2>
         <p class="projects-subtitle">
           Choisissez l'univers à découvrir : développement web ou création.
@@ -595,6 +596,23 @@
       </div>
     </section>
 
+    <!-- 🎵 Now Playing -->
+    <section id="now-playing" class="now-playing">
+      <div class="now-playing-bg"></div>
+      <div class="container">
+        <h2>En Écoute</h2>
+        <div class="now-playing-content">
+          <div class="album-section">
+            <div class="album-cover">
+              <!-- Spotify embed for Instant Crush (Daft Punk) -->
+              <iframe class="spotify-embed" src="https://open.spotify.com/embed/track/2cGxRwrMyEAp8dEbuZaVv6" width="300" height="300" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+            </div>
+            <p class="now-playing-caption">Ma musique du moment</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- 📞 Contact -->
     <section id="contact" class="contact">
       <h2>Contactez-moi</h2>
@@ -792,6 +810,31 @@
     });
 
     loadProjects();
+  </script>
+
+  <!-- GSAP Animation Library (critical, load early) -->
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
+  
+  <!-- Lenis Smooth Scroll -->
+  <script async src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1/dist/lenis.min.js"></script>
+  
+  <!-- Main Application Script -->
+  <script defer src="main.js"></script>
+  <script>
+    // If the URL contains #now-playing-only or ?now=1, show only the Now Playing section
+    (function(){
+      try {
+        const hash = window.location.hash || '';
+        const search = window.location.search || '';
+        if (hash === '#now-playing-only' || /[?&]now=1/.test(search)) {
+          document.documentElement.classList.add('focus-now-playing');
+          const el = document.getElementById('now-playing');
+          if (el) setTimeout(() => el.scrollIntoView({behavior:'auto', block:'start'}), 50);
+        }
+      } catch (e) { /* noop */ }
+    })();
   </script>
 </body>
 
