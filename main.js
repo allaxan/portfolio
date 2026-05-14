@@ -1,5 +1,4 @@
 
-
 const config = {
   isMobile: window.innerWidth < 768,
   isTablet: window.innerWidth < 1024,
@@ -7,38 +6,19 @@ const config = {
   animationEnabled: true,
 };
 
-let lenis;
 const eventListeners = [];
 // Spotify Web Playback SDK state
 let spotifyPlayer = null;
 let spotifyDeviceId = null;
 let spotifyConnected = false;
 
-// ============================================================================
-// LENIS SMOOTH SCROLL INITIALIZATION
-// ============================================================================
-
-function initializeLenis() {
-  if (typeof Lenis === 'undefined' || config.prefersReducedMotion) {
-    console.warn('Lenis unavailable or reduced motion enabled');
+function scheduleIdleWork(callback) {
+  if ('requestIdleCallback' in window) {
+    window.requestIdleCallback(callback, { timeout: 1500 });
     return;
   }
 
-  lenis = new Lenis({
-    duration: config.isMobile ? 0.8 : 1.2,
-    easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-    direction: 'vertical',
-    gestureDirection: 'vertical',
-    smooth: true,
-    smoothTouch: false,
-    touchMultiplier: 2,
-    infinite: false,
-  });
-
-  // Connect Lenis with GSAP ScrollTrigger
-  lenis.on('scroll', ScrollTrigger.update);
-  gsap.ticker.add((time) => lenis.raf(time * 1000));
-  gsap.ticker.lagSmoothing(0);
+  window.setTimeout(callback, 0);
 }
 
 // ============================================================================
@@ -50,13 +30,25 @@ function initializePortfolio() {
     config.animationEnabled = false;
   }
 
-  initializeLenis();
-  initializeAnimations();
-  initializeScrollAnimations();
-  initializeMouseGlow();
-  initializeInteractions();
-  initializeNowPlaying();
   setupProjectFiltering();
+
+  if (!config.animationEnabled) {
+    return;
+  }
+
+  const startEnhancedExperience = () => {
+    initializeAnimations();
+    initializeScrollAnimations();
+    initializeMouseGlow();
+    initializeInteractions();
+    initializeNowPlaying();
+  };
+
+  if (document.readyState === 'complete') {
+    scheduleIdleWork(startEnhancedExperience);
+  } else {
+    window.addEventListener('load', () => scheduleIdleWork(startEnhancedExperience), { once: true });
+  }
 }
 
 if (document.readyState === 'loading') {
@@ -165,13 +157,20 @@ function initializeMouseGlow() {
   let throttled = false;
   let inHero = false;
 
+  const updateHeroVisibility = () => {
+    inHero = window.scrollY < window.innerHeight;
+  };
+
+  updateHeroVisibility();
+  window.addEventListener('scroll', updateHeroVisibility, { passive: true });
+  window.addEventListener('resize', updateHeroVisibility, { passive: true });
+
   const handleMouseMove = (e) => {
     if (throttled) return;
     throttled = true;
     
     mouseX = e.clientX;
     mouseY = e.clientY;
-    inHero = window.scrollY < window.innerHeight;
 
     requestAnimationFrame(() => {
       if (inHero) {
@@ -498,62 +497,62 @@ function initializeNowPlaying() {
 function setupProjectFiltering() {
   const switchButtons = document.querySelectorAll('.switch-btn');
   const projectPanels = document.querySelectorAll('.projects-panel');
-  
+
+  if (!switchButtons.length || !projectPanels.length) {
+    return;
+  }
+
+  const applyFilter = (target) => {
+    switchButtons.forEach((button) => {
+      const isActive = button.dataset.target === target;
+      button.classList.toggle('is-active', isActive);
+      button.setAttribute('aria-selected', isActive ? 'true' : 'false');
+    });
+
+    projectPanels.forEach((panel) => {
+      const isActive = panel.id === `projects-${target}-panel`;
+      panel.classList.toggle('is-active', isActive);
+      panel.hidden = !isActive;
+      panel.setAttribute('aria-hidden', isActive ? 'false' : 'true');
+    });
+  };
+
+  const initialButton = document.querySelector('.switch-btn.is-active') || switchButtons[0];
+  const initialTarget = initialButton ? initialButton.dataset.target : 'dev';
+
+  applyFilter(initialTarget);
+
   switchButtons.forEach((button) => {
+    if (button.dataset.projectFilteringBound === 'true') {
+      return;
+    }
+
+    button.dataset.projectFilteringBound = 'true';
+
     button.addEventListener('click', function() {
-      const filterValue = this.dataset.filter;
-      
-      // Update active button
-      switchButtons.forEach(btn => btn.classList.remove('is-active'));
-      this.classList.add('is-active');
-      
-      // Animate panels
-      projectPanels.forEach((panel) => {
-        const panelCategory = panel.dataset.category;
-        
-        if (panelCategory === filterValue || filterValue === 'all') {
-          gsap.to(panel, {
-            opacity: 1,
-            duration: 0.5,
-            ease: 'power2.out',
-            onStart() {
-              panel.style.display = 'grid';
-            }
-          });
-        } else {
-          gsap.to(panel, {
-            opacity: 0,
-            duration: 0.5,
-            ease: 'power2.out',
-            onComplete() {
-              panel.style.display = 'none';
-            }
-          });
-        }
-      });
+      const target = this.dataset.target;
+
+      if (!target) {
+        return;
+      }
+
+      applyFilter(target);
     });
   });
 }
-
-// Initialize project filtering when DOM is ready
-document.addEventListener('DOMContentLoaded', setupProjectFiltering);
 
 // ============================================================================
 // SCROLL TO SECTION HELPER
 // ============================================================================
 
 /**
- * Smooth scroll to section (uses Lenis if available)
+ * Smooth scroll to section
  */
 function scrollToSection(selector) {
   const element = document.querySelector(selector);
   if (!element) return;
-  
-  if (lenis) {
-    lenis.scrollTo(element, { duration: 1.2, easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)) });
-  } else {
-    element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  }
+
+  element.scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
 
 // ============================================================================
@@ -589,20 +588,6 @@ function isElementInViewport(el) {
 // ============================================================================
 // RESPONSIVE ADJUSTMENTS
 // ============================================================================
-
-/**
- * Adjust animations based on screen size
- */
-function adjustAnimationsForScreen() {
-  const isMobile = window.innerWidth < 768;
-  
-  // Reduce animation intensity on mobile
-  if (isMobile && lenis) {
-    lenis.options.duration = 0.8;
-  } else if (lenis) {
-    lenis.options.duration = 1.2;
-  }
-}
 
 // ============================================================================
 // CLEANUP & PERFORMANCE
